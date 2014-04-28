@@ -1,0 +1,13 @@
+<h1>Login#index</h1>
+<p>Find me in app/views/login/index.html.erb</p>
+
+<div ng-controller="LoginController">
+  <h1>{{ 1 + 3 }} och {{ test }}</h1>
+  Search: <input ng-model="query"> {{query}}
+  <ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>

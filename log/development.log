@@ -1,0 +1,2070 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-28 23:24:22 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:28:22 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 97ms
+
+ActionView::Template::Error (couldn't find file 'angular'
+  (in /Users/Mattias/Development/Web/homeflix/app/assets/javascripts/application.js:15)):
+    3: <head>
+    4:   <title>Homeflix</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all"%>
+    6:   <%= javascript_include_tag "application"%>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1475162510985403449_2156469300'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.7ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 201ms (Views: 200.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/angular.min.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+
+Started GET "/assets/angular.min.js.map" for 127.0.0.1 at 2014-04-28 23:29:09 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/angular.min.js.map"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.4ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:25 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:29:28 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:33:58 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 65ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:33:59 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:12 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:34 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:40 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:35:47 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:36:36 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:39:18 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:39:19 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/controllers/cont.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:40:01 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:42:57 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:01 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:14 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:18 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:24 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:24 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:24 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:25 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:36 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:45 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:43:55 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:46:52 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:11 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:15 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:25 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:47:28 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:22 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:49:41 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:04 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:40 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 23:52:48 +0200
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140428215747)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140428215747"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (46.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (36.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140428215747')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140428215747)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140428215747"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140428215747')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:17:58 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 240ms (Views: 209.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:17:59 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/modules/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:18:09 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:19:51 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:22:15 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:23 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:24:34 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:04 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:12 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:41 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:49 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:29:56 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:05 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:16 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:30:19 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:32:57 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:56 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:35:58 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:02 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:42 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:55 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:36:58 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:07 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:37:10 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:06 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:17 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:38:49 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:39:57 +0200
+
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.6ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:40:29 +0200
+
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:37 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:49 +0200
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
