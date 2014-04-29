@@ -1,0 +1,7 @@
+Search: <input ng-model="query">
+<div class="pull-left test">
+    <div ng-repeat="movie in movies | filter:query">
+      	<img ng-src="{{movie.Poster}}">
+      	<p>{{movie}}</p>
+    </div>
+</div>
