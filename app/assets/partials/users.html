@@ -1,13 +1,14 @@
-<h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
+<h1>My blog</h1>
 
-<div ng-controller="LoginController">
+<div ng-controller="UserController">
   <h1>{{ 1 + 3 }} och {{ test }}</h1>
   Search: <input ng-model="query"> {{query}}
   <ul>
     <li ng-repeat="user in users | filter:query">
-      {{user.name}}
+      <p>{{user.name}}</p>
       <p>{{user.password}}</p>
     </li>
   </ul>
 </div>
+
+<a href="#/"></a>

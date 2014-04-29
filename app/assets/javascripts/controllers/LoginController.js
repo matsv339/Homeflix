@@ -10,7 +10,4 @@ loginControllers.controller('LoginController', function($scope, $http) {
     	{'name': 'MOTOROLA XOOM™',
      	'snippet': 'The Next, Next Generation tablet.'}
   	];
-  	$http.get('/users.json').success(function(data) {
-  		$scope.users = data;
-  	});
 });

@@ -1,5 +1,5 @@
 Homeflix::Application.routes.draw do
-  root to: "login#index"
+  root to: "main#index"
   
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
