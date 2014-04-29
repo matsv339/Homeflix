@@ -1,5 +1,5 @@
 var userControllers = angular.module('userControllers', []);
 
-userControllers.controller('UserController', function($scope) {
+userControllers.controller('UserController', function($scope, $http) {
 
 });

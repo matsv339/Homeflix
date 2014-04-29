@@ -2068,3 +2068,564 @@ Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 00:40:52 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 19:51:04 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 15ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 19:51:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 19:51:08 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-04-29 19:51:09 +0200
+
+ActionController::RoutingError (No route matches [GET] "/welcome/index"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Mattias/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.5ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.3ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/index" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 19:52:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140429175712)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140429175712)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140428215747')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "enctypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140428215747')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140429175712)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140429175712"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (48.7ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 29 Apr 2014 18:03:19 UTC +00:00], ["name", "Mattias"], ["password", "abcd"], ["updated_at", Tue, 29 Apr 2014 18:03:19 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 29 Apr 2014 18:04:11 UTC +00:00], ["name", "Matte"], ["password", "hej"], ["updated_at", Tue, 29 Apr 2014 18:04:11 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 300ms (Views: 291.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:07:06 +0200
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:13:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (undefined method `respont_to' for UsersController:Class):
+  app/controllers/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:13:29 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:14:03 +0200
+
+
+Started GET "/users" for 127.0.0.1 at 2014-04-29 20:14:06 +0200
+
+ActionController::RoutingError (undefined method `respont_to' for UsersController:Class):
+  app/controllers/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (18.9ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:14:25 +0200
+
+ActionController::RoutingError (undefined method `respont_to' for UsersController:Class):
+  app/controllers/users_controller.rb:2:in `<class:UsersController>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Mattias/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.2ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:14:52 +0200
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:14:59 +0200
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:19:26 +0200
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:27 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:19:28 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:20:06 +0200
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:20:16 +0200
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/controllers/LoginController.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/controllers/UserController.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/angular.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+
+
+Started GET "/users.json" for 127.0.0.1 at 2014-04-29 20:21:21 +0200
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
