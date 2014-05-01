@@ -8,4 +8,5 @@ class MoviesController < ApplicationController
 			format.json { render :json => movies.as_json }
 		end
 	end
+
 end

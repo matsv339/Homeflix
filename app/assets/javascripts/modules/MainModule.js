@@ -2,7 +2,8 @@ homeflix = angular.module('homeflix', [
 	'ngRoute',
 	'loginControllers',
 	'userControllers',
-	'movieController'
+	'movieControllers',
+	'navbarControllers'
 ]);
 
 homeflix.config(['$routeProvider',
@@ -17,8 +18,16 @@ homeflix.config(['$routeProvider',
 	        	controller: 'LoginController'
 	      	}).
 	      	when('/movies', {
-	        	templateUrl: 'assets/movies.html',
+	        	templateUrl: 'assets/movie-list.html',
 	        	controller: 'MovieController'
+	      	}).
+	      	when('/movies/:movieID', {
+	        	templateUrl: 'assets/movie-detail.html',
+	        	controller: 'MovieDetailedController'
+	      	}).
+	      	when('/player/:movieID', {
+	        	templateUrl: 'assets/player.html',
+	        	controller: 'PlayerController'
 	      	}).
 	      	otherwise({
 	        	redirectTo: '/'
