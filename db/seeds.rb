@@ -18,3 +18,4 @@ Movie.create(imdbID:"tt0167260") #LOTR
 Movie.create(imdbID:"tt0137523") #Fight C
 Movie.create(imdbID:"tt0080684") #Star wars
 Movie.create(imdbID:"tt0109830") #Forest Gump
+Movie.create(imdbID:"tt0317248") #City of god

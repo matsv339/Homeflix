@@ -26,7 +26,10 @@ movieControllers.controller('MovieDetailedController', function($scope, $routePa
     $scope.movieID = $routeParams.movieID;
     $http.get('http://www.omdbapi.com/?i=' + $scope.movieID).success(function(data) {
         $scope.movie = data;
+        // $scope.temp = 
+        $scope.rating = new Array(Math.round($scope.movie.imdbRating/2));
     });
+
 });
 
 

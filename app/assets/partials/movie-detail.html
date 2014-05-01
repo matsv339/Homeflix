@@ -1,15 +1,25 @@
-<div class="pull-left">
-
-	<a href="#/player/{{movie.imdbID}}" class="poster poster-large pull-left">
-		<!-- <div class="ttt"></div> -->
-		<div class="poster-overlay poster-play"></div>
-  		<img ng-src="{{movie.Poster}}">
-	</a>
-
-</div>
-<!-- {{movie}} -->
-<div class="pull-left">
-	<h1>{{movie.Title}}</h1>
-	<p>{{movie.Year}}</p>
-	<p>{{movie.imdbRating}}</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-12">
+			<a href="#/player/{{movie.imdbID}}" class="poster poster-large pull-left">
+				<!-- <div class="ttt"></div> -->
+				<div class="poster-overlay poster-play"></div>
+		  		<img ng-src="{{movie.Poster}}">
+			</a>
+		</div>
+		<!-- Description content -->
+		<div class="col-md-8 col-sm-6 col-xs-12">
+			<h1>{{movie.Title}}</h1>
+			<h4>{{movie.Genre}} - {{movie.Runtime}}</h4>
+			<p>
+				{{movie.Year}} | {{movie.Rated}} |
+				<span ng-repeat="i in rating track by $index" class="glyphicon glyphicon-star"></span>
+			</p>
+			<p>{{movie.Plot}}</p>
+			<p><strong>Director:</strong> {{movie.Director}}</p>
+			<p><strong>Writer:</strong> {{movie.Writer}}</p>
+			<p><strong>Actors:</strong> {{movie.Actors}}</p>
+			
+		</div>
+	</div>
 </div>
