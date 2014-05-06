@@ -27,7 +27,7 @@ favoritControllers.controller('FavoritController', function($scope, $http, Favor
 
 		
 
-		Favorits.create({user_id: 1});
+		
 		// $http.post('favorits.json').success(function(data) {
 		// 	console.log("yeye");
 		// }).error(function(data) {
@@ -40,9 +40,9 @@ favoritControllers.controller('FavoritController', function($scope, $http, Favor
     	//     headers: {'Content-Type': 'application/json'}
     	// });
 
-    	// $http.post('/users', params).success(function(data) {
-    	// 	console.log("jfjff");
-    	// });
+    	$http.post('/favorits', params).success(function(data) {
+    		console.log("jfjff");
+    	});
       //   $http({
       //   	method: "POST", 
       //   	url: "/users",

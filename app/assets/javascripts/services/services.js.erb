@@ -8,6 +8,10 @@ serviceModule.service('Movies', function($resource) {
 	return $resource('/movies.json', {}, {'index': { method: 'GET', isArray: true}});
 });
 
+serviceModule.service('IMDB', function($resource) {
+	return $resource('http://www.omdbapi.com/:idmbID', {}, {'get': { method: 'GET'}});
+});
+
 serviceModule.service('Favorits', function($resource) {
 	return $resource('/favorits/:user_id', {}, {'create': { method: 'POST'}});
 });

@@ -29,7 +29,7 @@ homeflix.config(['$routeProvider',
 	      		templateUrl: '<%= asset_path("movie-list.html")%>',
 	        	controller: 'MovieController'
 	      	}).
-	      	when('/movies/:movieID', {
+	      	when('/movies/:movieID/:imdbID', {
 	      		templateUrl: '<%= asset_path("movie-detail.html")%>',
 	        	controller: 'MovieDetailedController'
 	      	}).

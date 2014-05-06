@@ -1,19 +1,26 @@
 var movieControllers = angular.module('movieControllers', ['favoritControllers']);
 
 
-movieControllers.controller('MovieController', function($scope, $http, Movies) {
+movieControllers.controller('MovieController', function($scope, $http, Movies, IMDB) {
     Movies.index(function(data) {
         $scope.movies = [];
-        for(var i = 0;i < data.length; i++) {
-            $http.get('http://www.omdbapi.com/?i=' + data[i].imdbID).success(function(data) {
-                $scope.movies.push(data);
-            });
+        for(var id = 0;id < data.length; id++) {
+            addIMDBData($http, id, data[id].imdbID, $scope.movies);
         }
     });
-    // console.log($scope.t); 
 });
 
+function addIMDBData($http, id, imdbID, movies) {
+    $http.get('http://www.omdbapi.com/?i=' + imdbID).success(function(data) {
+        data.id = id;
+        console.log(data);
+        movies.push(data);
+        // return data;
+    });
+}
+
 movieControllers.controller('MovieDetailedController', function($scope, $routeParams, $http) {
+    $scope.imdbID = $routeParams.imdbID;
     $scope.movieID = $routeParams.movieID;
     $http.get('http://www.omdbapi.com/?i=' + $scope.movieID).success(function(data) {
         $scope.movie = data;
