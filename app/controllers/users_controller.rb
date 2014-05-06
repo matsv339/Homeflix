@@ -8,4 +8,8 @@ class UsersController < ApplicationController
 			format.json { render :json => users.as_json }
 		end
 	end
+
+	def create
+		
+	end
 end

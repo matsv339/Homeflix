@@ -1,7 +1,5 @@
-var userControllers = angular.module('userControllers', []);
+var userControllers = angular.module('userControllers', ['serviceModule']);
 
-userControllers.controller('UserController', function($scope, $http) {
-	$http.get('/users.json').success(function(data) {
-  		$scope.users = data;
-  	});
+userControllers.controller('UserController', function($scope, $http, Users) {
+	$scope.users = Users.index({user_id: 1});
 });

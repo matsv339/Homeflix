@@ -19,3 +19,18 @@ Movie.create(imdbID:"tt0137523") #Fight C
 Movie.create(imdbID:"tt0080684") #Star wars
 Movie.create(imdbID:"tt0109830") #Forest Gump
 Movie.create(imdbID:"tt0317248") #City of god
+Movie.create(imdbID:"tt1229340") #Anchorman II
+
+User.create(username:"matsv339", password:"123")
+User.create(username:"admin", password:"admin")
+
+Favorit.create(user_id:"1", movie_id:"3")
+Favorit.create(user_id:"1", movie_id:"5")
+Favorit.create(user_id:"2", movie_id:"3")
+Favorit.create(user_id:"2", movie_id:"1")
+Favorit.create(user_id:"2", movie_id:"7")
+
+
+
+# Movie.create(user_id:"1", imdbID:"tt0110912") #Pulp Fiction
+# User.create(username:"aaa", password:"bbb")

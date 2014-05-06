@@ -19,6 +19,15 @@
 			<p><strong>Director:</strong> {{movie.Director}}</p>
 			<p><strong>Writer:</strong> {{movie.Writer}}</p>
 			<p><strong>Actors:</strong> {{movie.Actors}}</p>
+			<form ng-controller="FavoritController" ng-submit="addFavorit()">
+				<button class="btn btn-success">Add to favorits {{stra}}</button>
+			</form>
+			{{movie}}
+			
+			
+			
+			
+			
 			
 		</div>
 	</div>

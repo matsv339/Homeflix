@@ -1,0 +1,44 @@
+homeflix = angular.module('homeflix', [
+	'ngRoute',
+	'loginControllers',
+	'userControllers',
+	'movieControllers',
+	'navbarControllers'
+]);
+
+homeflix.controller('MainController', function($http) {
+	var token = $("meta[name='csrf-token']").attr("content");
+	$http.defaults.headers.post['X-CSRF-Token'] = token;
+	$http.defaults.headers.put['X-CSRF-Token'] = token;
+	// $http.defaults.headers.destroy['X-CSRF-Token'] = token;
+
+});
+
+homeflix.config(['$routeProvider',
+  	function($routeProvider) {
+	    $routeProvider.
+	      	when('/users', {
+	        	templateUrl: '<%= asset_path("users.html")%>',
+	        	controller: 'UserController'
+	      	}).
+	      	when('/test', {
+	        	templateUrl: 'assets/test.html',
+	        	controller: 'LoginController'
+	      	}).
+	      	when('/movies', {
+	      		templateUrl: '<%= asset_path("movie-list.html")%>',
+	        	controller: 'MovieController'
+	      	}).
+	      	when('/movies/:movieID', {
+	      		templateUrl: '<%= asset_path("movie-detail.html")%>',
+	        	controller: 'MovieDetailedController'
+	      	}).
+	      	when('/player/:movieID', {
+	      		templateUrl: '<%= asset_path("player.html")%>',
+	        	controller: 'PlayerController'
+	      	}).
+	      	otherwise({
+	        	redirectTo: '/'
+	      	});
+  	}
+]);
