@@ -1,8 +1,8 @@
 class CreateFavorits < ActiveRecord::Migration
   	def change
     	create_table :favorits do |t|
-    		t.belongs_to :user
-    		t.belongs_to :movie
+    		t.string :user_id
+    		t.string :imdb_id
 
       		t.timestamps
     	end

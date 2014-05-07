@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20140501153846) do
 
   create_table "favorits", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "movie_id"
+    t.string   "user_id"
+    t.string   "imdb_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "movies", force: true do |t|
-    t.string   "imdbID"
+    t.string   "imdb_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

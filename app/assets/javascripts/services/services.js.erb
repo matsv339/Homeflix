@@ -9,9 +9,10 @@ serviceModule.service('Movies', function($resource) {
 });
 
 serviceModule.service('IMDB', function($resource) {
-	return $resource('http://www.omdbapi.com/:idmbID', {}, {'get': { method: 'GET'}});
+	return $resource('http://www.omdbapi.com/:idmb_id', {}, {'get': { method: 'GET'}});
 });
 
 serviceModule.service('Favorits', function($resource) {
-	return $resource('/favorits/:user_id', {}, {'create': { method: 'POST'}});
+	return $resource('/favorits', {}, {'create': { method: 'POST'},
+									   'destroy': {method: 'DELETE'}});
 });

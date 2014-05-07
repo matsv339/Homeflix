@@ -1,7 +1,7 @@
 class CreateMovies < ActiveRecord::Migration
   	def change
     	create_table :movies do |t|
-    		t.string :imdbID
+    		t.string :imdb_id
 
       		t.timestamps
     	end

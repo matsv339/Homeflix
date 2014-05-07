@@ -2,30 +2,39 @@ class FavoritsController < ApplicationController
 	respond_to :json
 
 	def index
-		favorits = Favorit.select("movies.imdbID").joins(:movie, :user)
+		favorits = Favorit.all
 		
 		respond_with(favorits) do |format|
 			format.json { render :json => favorits.as_json }
 		end
 	end
 
-	def show 
-		favorits = Favorit.select("movies.imdbID").joins(:movie, :user).where("users.username = ?", params[:id])
+	def check 
+		user_id = params[:user_id]
+		imdb_id = params[:imdb_id]
+
+		favorits = Favorit.find_by(imdb_id: imdb_id, user_id: user_id)
 		
 		respond_with(favorits) do |format|
 			format.json { render :json => favorits.as_json }
 		end
+	end
+
+	def destroy
+		user_id = params[:user_id]
+		imdb_id = params[:imdb_id]
+		Favorit.delete_all("user_id = ? AND imdb_id = ?", user_id, imdb_id)
 	end
 
 	def create
+		user_id = params[:user_id]
+		imdb_id = params[:imdb_id]
 
-		# current_user = params[:user]
-		# imdbID = params[:movie]
-		# movie_id = Movie.select("id").where("imdbID = ?", imdbID)
-		# puts current_user
-		# puts indbID
-		# puts "jfjfjf"
-		# Favorit.create(user_id:current_user, movie_id:movie_id[0][:id])
+		if not Favorit.find_by(imdb_id: imdb_id, user_id: user_id)
+			Favorit.create(user_id: user_id, imdb_id: imdb_id)
+		end
+
+		redirect_to "/"
 	end
 
 end

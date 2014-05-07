@@ -6,10 +6,12 @@ homeflix = angular.module('homeflix', [
 	'navbarControllers'
 ]);
 
-homeflix.controller('MainController', function($http) {
+homeflix.controller('MainController', function($http, $rootScope) {
 	var token = $("meta[name='csrf-token']").attr("content");
 	$http.defaults.headers.post['X-CSRF-Token'] = token;
 	$http.defaults.headers.put['X-CSRF-Token'] = token;
+	$http.defaults.headers.delete['X-CSRF-Token'] = token;
+	$rootScope.current_user = 1;
 	// $http.defaults.headers.destroy['X-CSRF-Token'] = token;
 
 });
@@ -27,13 +29,13 @@ homeflix.config(['$routeProvider',
 	      	}).
 	      	when('/movies', {
 	      		templateUrl: '<%= asset_path("movie-list.html")%>',
-	        	controller: 'MovieController'
+	        	controller: 'MovieListController'
 	      	}).
-	      	when('/movies/:movieID/:imdbID', {
+	      	when('/movies/:imdb_id', {
 	      		templateUrl: '<%= asset_path("movie-detail.html")%>',
 	        	controller: 'MovieDetailedController'
 	      	}).
-	      	when('/player/:movieID', {
+	      	when('/player/:imdb_id', {
 	      		templateUrl: '<%= asset_path("player.html")%>',
 	        	controller: 'PlayerController'
 	      	}).

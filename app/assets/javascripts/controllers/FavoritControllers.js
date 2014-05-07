@@ -1,55 +1,31 @@
 var favoritControllers = angular.module('favoritControllers', []);
 
-// favoritControllers.config(function($http, $cookies) {
-	
-// });
-
-// favoritControllers.config(["$httpProvider", function(provider) {
-//   // provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-// }]);
-
-favoritControllers.controller('FavoritController', function($scope, $http, $routeParams, Favorits, IMDB) {
+favoritControllers.controller('FavoritController', function($scope, $rootScope, $http, $routeParams, Favorits) {
     
-    $scope.movieID = $routeParams.movieID;
-    $scope.imdbID = $routeParams.imdbID;
-    console.log('id=' + $scope.movieID);
-    console.log('imdb=' + $scope.imdbID);
-
+    $scope.imdb_id = $routeParams.imdb_id;
+    $http.get("/favorits/" + $rootScope.current_user + "/" + $scope.imdb_id + ".json").success(function(data) {
+        console.log(data);
+        if (data == "null") {
+            $scope.favorit_text = "Add to favorits";
+            $scope.is_favorit = false;
+        }
+        else {
+            $scope.favorit_text = "Remove from favorits";
+            $scope.is_favorit = true;
+        }
+    });
     $scope.addFavorit = function() {
-        var url = '/favorits';
-		var params = {user: 1, movie: $scope.movie.imdbID};
+        var params = {user_id: 1, imdb_id: $scope.imdb_id};
+        if ($scope.is_favorit) {
+            $http.delete("/favorits/" + $rootScope.current_user + "/" + $scope.imdb_id).success(function(data) {
 
-        //Add the movie to favorits
-        $http.post('/favorits', params).success(function(data) {
-            console.log(data);
-        });
-    
-
+            });
+            // Favorits.destroy(params);
+        }
+        else if (!$scope.is_favorit) {}; {
+            //Add the movie to favorits
+            Favorits.create(params);    
+        }
 		
-
-		
-		// $http.post('favorits.json').success(function(data) {
-		// 	console.log("yeye");
-		// }).error(function(data) {
-		// 	console.log("nej");
-		// });
-    	// $http({
-    	//     method: 'POST',
-    	//     url: url,
-    	//     data: params,
-    	//     headers: {'Content-Type': 'application/json'}
-    	// });
-
-    	
-      //   $http({
-      //   	method: "POST", 
-      //   	url: "/users",
-   			// headers: {'Content-Type': 'application/json'}
-      //   }).
-      //   success(function(data, status, headers, config) {
-      //       console.log(data);
-      //   }); 
     };
 });
-
-// cafetownsend-angular-rails.herokuapp.com
