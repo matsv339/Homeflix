@@ -13,18 +13,15 @@ movieControllers.controller('MovieController', function($scope, $http, Movies, I
 function addIMDBData($http, id, imdbID, movies) {
     $http.get('http://www.omdbapi.com/?i=' + imdbID).success(function(data) {
         data.id = id;
-        console.log(data);
         movies.push(data);
-        // return data;
     });
 }
 
 movieControllers.controller('MovieDetailedController', function($scope, $routeParams, $http) {
     $scope.imdbID = $routeParams.imdbID;
     $scope.movieID = $routeParams.movieID;
-    $http.get('http://www.omdbapi.com/?i=' + $scope.movieID).success(function(data) {
+    $http.get('http://www.omdbapi.com/?i=' + $scope.imdbID).success(function(data) {
         $scope.movie = data;
-        // $scope.temp = 
         $scope.rating = new Array(Math.round($scope.movie.imdbRating/2));
     });
 

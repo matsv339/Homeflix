@@ -4,26 +4,26 @@ var favoritControllers = angular.module('favoritControllers', []);
 	
 // });
 
-favoritControllers.config(["$httpProvider", function(provider) {
-  // provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-}]);
+// favoritControllers.config(["$httpProvider", function(provider) {
+//   // provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+// }]);
 
-favoritControllers.controller('FavoritController', function($scope, $http, Favorits) {
-	
-	
+favoritControllers.controller('FavoritController', function($scope, $http, $routeParams, Favorits, IMDB) {
+    
+    $scope.movieID = $routeParams.movieID;
+    $scope.imdbID = $routeParams.imdbID;
+    console.log('id=' + $scope.movieID);
+    console.log('imdb=' + $scope.imdbID);
 
- //    $http({method: 'GET', url: 'www.google.com/someapi', });
-
-    $scope.stra = "hahahha";
     $scope.addFavorit = function() {
-
-    	var url = '/favorits';
+        var url = '/favorits';
 		var params = {user: 1, movie: $scope.movie.imdbID};
 
-		$http.get('http://www.omdbapi.com/?i=' + $scope.movieID).success(function(data) {
-        	$scope.movie = data;    
-        	$scope.rating = new Array(Math.round($scope.movie.imdbRating/2));
-    	});
+        //Add the movie to favorits
+        $http.post('/favorits', params).success(function(data) {
+            console.log(data);
+        });
+    
 
 		
 
@@ -40,9 +40,7 @@ favoritControllers.controller('FavoritController', function($scope, $http, Favor
     	//     headers: {'Content-Type': 'application/json'}
     	// });
 
-    	$http.post('/favorits', params).success(function(data) {
-    		console.log("jfjff");
-    	});
+    	
       //   $http({
       //   	method: "POST", 
       //   	url: "/users",
