@@ -4,7 +4,6 @@ var movieControllers = angular.module('movieControllers', ['favoritControllers']
 movieControllers.controller('MovieListController', function($scope, $http, Movies, IMDB) {
     Movies.index(function(data) {
         $scope.movies = [];
-        console.log(data);
         for(var i = 0;i < data.length; i++) {
             $http.get('http://www.omdbapi.com/?i=' + data[i].imdb_id).success(function(data) {
                 $scope.movies.push(data);
@@ -23,20 +22,13 @@ movieControllers.controller('MovieDetailedController', function($scope, $routePa
 
 });
 
-
-movieControllers.controller('PlayerController', function($scope, $http, $routeParams, $location) {
+movieControllers.controller('PlayerController', function($scope, $routeParams, $location) {
     //Find the movie on server
     // $scope.moviePath = "assets/" + $routeParams.imdb_id + ".mp4";
-    //Override
-    $scope.moviePath = "assets/tt1229340.mp4";
-
+    //Override to only play sample video
+    $scope.moviePath = '<%= asset_path("tt1229340.mp4")%>';
     //Initialises the player
-    videojs("player", {}, function() {
-        
-    });
-    
-    //Apply the src to the video
-    videojs("player").ready(function() {     
+    videojs("player", {controls: true, preload: "auto", autoplay: true, width: "100%", height: "100%"}, function() {
         player = this;
         player.pause();
         player.src($scope.moviePath);    

@@ -1,19 +1,18 @@
 class FavoritsController < ApplicationController
 	respond_to :json
 
+
 	def index
-		favorits = Favorit.all
+		puts params[:user_id]
+		favorits = Favorit.where(user_id: params[:user_id])
 		
 		respond_with(favorits) do |format|
 			format.json { render :json => favorits.as_json }
 		end
 	end
 
-	def check 
-		user_id = params[:user_id]
-		imdb_id = params[:imdb_id]
-
-		favorits = Favorit.find_by(imdb_id: imdb_id, user_id: user_id)
+	def show 
+		favorits = Favorit.where(imdb_id: params[:imdb_id], user_id: params[:user_id])
 		
 		respond_with(favorits) do |format|
 			format.json { render :json => favorits.as_json }
@@ -21,20 +20,18 @@ class FavoritsController < ApplicationController
 	end
 
 	def destroy
-		user_id = params[:user_id]
-		imdb_id = params[:imdb_id]
-		Favorit.delete_all("user_id = ? AND imdb_id = ?", user_id, imdb_id)
+		favorit = Favorit.find_by(imdb_id: params[:imdb_id], user_id: params[:user_id])
+		favorit.destroy
+		head :ok
 	end
 
 	def create
-		user_id = params[:user_id]
-		imdb_id = params[:imdb_id]
 
-		if not Favorit.find_by(imdb_id: imdb_id, user_id: user_id)
-			Favorit.create(user_id: user_id, imdb_id: imdb_id)
+		if not Favorit.find_by(imdb_id: params[:imdb_id], user_id: params[:user_id])
+			Favorit.create(user_id: params[:user_id], imdb_id: params[:imdb_id])
 		end
 
-		redirect_to "/"
+		head :ok
 	end
 
 end

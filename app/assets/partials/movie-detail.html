@@ -19,10 +19,10 @@
 			<p><strong>Director:</strong> {{movie.Director}}</p>
 			<p><strong>Writer:</strong> {{movie.Writer}}</p>
 			<p><strong>Actors:</strong> {{movie.Actors}}</p>
-			<form ng-controller="FavoritController" ng-submit="addFavorit()">
-				<button class="btn btn-success">{{favorit_text}}</button>
+			<form ng-controller="FavoritController" ng-submit="updateFavorits()">
+				<button class="btn" ng-class="{'btn-success': !is_favorit, 'btn-danger': is_favorit}">{{favorit_text}}</button>
 			</form>
-			{{movie}}
+			
 		</div>
 	</div>
 </div>
