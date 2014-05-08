@@ -1,24 +1,18 @@
-homeflix = angular.module('homeflix', [
+angular.module('homeflix', [
 	'ngRoute',
-	'loginControllers',
-	'userControllers',
-	'movieControllers',
-	'navbarControllers'
+	'loginModule',
+	'userModule',
+	'movieModule',
+	'navigationModule',
+	'playerModule'
 ]);
 
-homeflix.controller('MainController', function($http, $rootScope) {
-	var token = $("meta[name='csrf-token']").attr("content");
-	$http.defaults.headers.post['X-CSRF-Token'] = token;
-	$http.defaults.headers.put['X-CSRF-Token'] = token;
-	// $http.defaults.headers.delete['X-CSRF-Token'] = token;
-	$rootScope.current_user = 1;
-	// $http.defaults.headers.destroy['X-CSRF-Token'] = token;
-
-});
-
-homeflix.config(['$routeProvider',
+angular.module('homeflix').config(['$routeProvider',
   	function($routeProvider) {
 	    $routeProvider.
+	    	when('/home', {
+	        	templateUrl: '<%= asset_path("home.html")%>'
+	      	}).
 	      	when('/users', {
 	        	templateUrl: '<%= asset_path("users.html")%>',
 	        	controller: 'UserController'
@@ -40,7 +34,7 @@ homeflix.config(['$routeProvider',
 	        	controller: 'PlayerController'
 	      	}).
 	      	otherwise({
-	        	redirectTo: '/'
+	        	redirectTo: '/home'
 	      	});
   	}
 ]);

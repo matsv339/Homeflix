@@ -1,6 +1,4 @@
-var loginControllers = angular.module('loginControllers', []);
-
-loginControllers.controller('LoginController', function($scope, $http) {
+angular.module('loginModule').controller('LoginController', function($scope, $http) {
 	$scope.test = "hej";
 	$scope.phones = [
     	{'name': 'Nexus S',

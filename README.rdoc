@@ -1,28 +1,24 @@
-== README
+Functional specification:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This will be a service similar to netflix. The server provides movies that the user will be able to watch online. 
 
-Things you may want to cover:
+The server will host all movie and provide information served by IMDB or similar APIs. (Need to look up to what extent this is provided from different parties).
 
-* Ruby version
+For a user is required to have an account to be able to use the content. 
+A user will be able to:
 
-* System dependencies
+- Stream movies for online watching.
+- Search movies.
+- Be presented the latest/top movies on the home screen.
+- Create favorites.
+- Rate movies.
+- Make public comments on movies.
+- Share movies to outer users.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Technological specification:
+(1) Angular.js
+(2) Ruby on rails
+(3) mysql database
+(4) oAuth
+(5) This service will also be available on mobile clients as long as the phone supports the specified file format. (Need to do some research on how much more complicated this will be).
+(6) Both Angular.js and Rails has some testing built in that we will use.

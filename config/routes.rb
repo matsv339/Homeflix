@@ -1,14 +1,20 @@
 Homeflix::Application.routes.draw do
   root to: "main#index"
   
-  resources :users
-  resources :movies
+  # User routes
+  get '/users' => 'users#index'
+
+  # Movie routes 
+  get '/movies' => 'movies#index'
 
   # Favorit routes
   get 'favorits/:user_id' => 'favorits#index'
   get 'favorits/:user_id/:imdb_id' => 'favorits#show'
   delete 'favorits/:user_id/:imdb_id' => 'favorits#destroy'
   post 'favorits/:user_id/:imdb_id' => 'favorits#create'
+
+  # Movie routes 
+  get '/imdb' => 'imdb#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

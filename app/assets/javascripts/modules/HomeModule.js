@@ -1,0 +1,1 @@
+angular.homeModule = angular.module('homeModule', []);

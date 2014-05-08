@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
-//= require_tree .
 //= require bootstrap
 //= require video
+
+//= require_tree ./modules
+//= require_tree ./controllers
+//= require_tree .

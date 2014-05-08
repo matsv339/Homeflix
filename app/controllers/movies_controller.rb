@@ -1,10 +1,17 @@
 class MoviesController < ApplicationController
 	respond_to :json
+	require 'net/http'
 
 	def index
-		puts "test"
 		movies = Movie.all
-		puts "test2"
+		
+		# If we want to return complete array with IMDB data. This was alot slower.
+		
+		# result = Array.new
+		# movies.each do |item|
+		# 	result.push(Net::HTTP.get(URI.parse('http://www.omdbapi.com?i=tt0111161')))
+		# end
+
 		respond_with(movies) do |format|
 			format.json { render :json => movies.as_json }
 		end

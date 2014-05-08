@@ -1,6 +1,4 @@
-var favoritControllers = angular.module('favoritControllers', []);
-
-favoritControllers.controller('FavoritController', function($scope, $rootScope, $http, $routeParams, Favorits) {
+angular.module('favoritModule').controller('FavoritController', function($scope, $rootScope, $http, $routeParams, Favorits) {
     //Add imdb_id to scope
     $scope.imdb_id = $routeParams.imdb_id;
     

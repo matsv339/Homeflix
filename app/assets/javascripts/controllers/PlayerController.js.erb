@@ -1,0 +1,20 @@
+angular.module('playerModule').controller('PlayerController', function($scope, $routeParams, $location) {
+    //Find the movie on server
+    // $scope.moviePath = "assets/" + $routeParams.imdb_id + ".mp4";
+    //Override to only play sample video
+    $scope.moviePath = '<%= asset_path("tt1229340.mp4")%>';
+    //Initialises the player
+    videojs("player", {controls: true, preload: "auto", autoplay: true, width: "100%", height: "100%"}, function() {
+        player = this;
+        player.pause();
+        player.src($scope.moviePath);    
+        player.play();
+    });
+        
+    //Routes back to the spesific movie page when the movie finish.
+    player.on("ended", function() {
+        $location.path('/movies/' + $routeParams.imdb_id);
+        $scope.$apply();
+    });
+});
+
