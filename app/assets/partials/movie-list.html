@@ -1,9 +1,10 @@
 <div class="container">
-	<div class="search-field">
+<!-- 	<div class="search-field">
 		<input type="text" class="form-control" ng-model="query" placeholder="Search movie">
-	</div>
-	
-	<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small pull-left" ng-repeat="movie in movies | filter:query | orderBy:'Title':true">
+	</div> -->
+	<h1>Movies</h1>
+	<hr>
+	<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small pull-left" ng-repeat="movie in movies | orderBy:'Title':true">
 		<div class="poster-overlay"></div>
 		<img ng-src="{{movie.Poster}}">
 	</a>

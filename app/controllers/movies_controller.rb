@@ -19,6 +19,16 @@ class MoviesController < ApplicationController
 
 	def last
 		movies = Movie.limit(3).order("created_at desc")
+		
+		respond_with(movies) do |format|
+			format.json { render :json => movies.as_json }
+		end
+	end
+
+	def search 
+
+		movies = Movie.search(params[:key])
+		
 		respond_with(movies) do |format|
 			format.json { render :json => movies.as_json }
 		end

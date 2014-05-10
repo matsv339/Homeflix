@@ -13,7 +13,8 @@
 			<h4>{{movie.Genre}} - {{movie.Runtime}}</h4>
 			<p>
 				{{movie.Year}} | {{movie.Rated}} |
-				<span ng-repeat="i in rating track by $index" class="glyphicon glyphicon-star"></span>
+				<!-- <span ng-repeat="i in rating track by $index" class="glyphicon glyphicon-star"></span> -->
+				<rating ng-model="rate" readonly="true" max="max" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
 			</p>
 			<p>{{movie.Plot}}</p>
 			<p><strong>Director:</strong> {{movie.Director}}</p>
