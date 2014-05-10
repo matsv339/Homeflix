@@ -6,15 +6,23 @@ $poster-height-small: 200px;
 $poster-width-small: $poster-height-small * 0.66; 
 
 $poster-height-large: 400px;
-$poster-width-large: $poster-height-large * 0.66; 
+$poster-width-large: $poster-height-large * 0.66;
+
+$poster-height-carousel: 300px;
+$poster-width-carousel: $poster-height-carousel * 0.66; 
 
 .poster {
 	position: relative;
 	overflow: hidden;
+	display: block;
 
 	img {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: auto;
-		height: 100%;	
+		height: 100%;
+
 	}
 }
 
@@ -28,6 +36,8 @@ $poster-width-large: $poster-height-large * 0.66;
 	width: $poster-width-large;
 	height: $poster-height-large;
 }
+
+
 
 .poster-overlay {
 	color: white;
@@ -77,33 +87,57 @@ $poster-width-large: $poster-height-large * 0.66;
 	margin: 10px;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+/* Home
 -------------------------------------------------- */
+
+/*.home-title {
+	position: absolute;
+	top: 21;
+	width: 60%;
+	left: 50%;
+	margin-left: -30%;
+	text-align: center;
+	z-index: 20;
+	color: white;
+}*/
 
 /* Carousel base class */
 .carousel {
 	margin-top: -21px;
   	height: 500px;
   	margin-bottom: 60px;
-}
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  	z-index: 10;
-  	text-align: left;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  	height: 500px;
   	background-color: black;
 }
 
 .carousel-content {
-	margin-left: 10px;
-	
+	position: relative;
+	height: 500px;
+ 	/*background-color: red; 	*/
+ 	text-align: left;
+ 	width: 60%;
+ 	max-width: 650px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	overflow: hidden;
+ 	color: white;
+ 	text-shadow: 0 1px 2px rgba(0,0,0,.6); 
+
+ 	h2 {
+ 		margin-top: (500 - $poster-height-carousel) / 2;
+ 	}
+
+ 	.carousel-btn {
+ 		position: absolute;
+ 		bottom: (500 - $poster-height-carousel) / 2;
+ 		right: 0;
+ 	}
 }
 
-.carousel-poster {
-	
+.poster-carousel {
+	float: left;
+	display: inline-block;
+	margin-top: (500 - $poster-height-carousel) / 2;
+	margin-right: 40px;
+	width: $poster-width-carousel;
+	height: $poster-height-carousel;
 }

@@ -8,9 +8,10 @@
 		</a>
 		<div class="favorit-head">
 			<h4 class="pull-left"><a href="#/movies/{{movie.imdbID}}">{{movie.Title}}</a></h4>
-			<span class="favorit-remove pull-right glyphicon glyphicon-remove" ng-click="removeFavorit(movie.imdbID, $index)"></span>
+			<span class="favorit-remove pull-right glyphicon glyphicon-remove" ng-click="removeFavorit(movie.imdbID, $index)" tooltip="Remove favorit" tooltip-placement="left" tooltip-popup-delay="500"></span>
 		</div>	
 		<h5>{{movie.Genre}} - {{movie.Runtime}}</h5>
 		<p>{{movie.Plot}}</p>
 	</div>
+	<a href="/ahhf" >Test</a>
 </div>

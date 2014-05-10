@@ -3,7 +3,7 @@
 		<input type="text" class="form-control" ng-model="query" placeholder="Search movie">
 	</div>
 	
-	<a href="#/movies/{{movie.imdbID}}" class="poster poster-small pull-left" ng-repeat="movie in movies | filter:query | orderBy:'Title':true">
+	<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small pull-left" ng-repeat="movie in movies | filter:query | orderBy:'Title':true">
 		<div class="poster-overlay"></div>
 		<img ng-src="{{movie.Poster}}">
 	</a>
