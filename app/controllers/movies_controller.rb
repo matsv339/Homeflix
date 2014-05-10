@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 	respond_to :json
-	require 'net/http'
+	# require 'net/http'
 
 	def index
 		movies = Movie.all
@@ -12,6 +12,13 @@ class MoviesController < ApplicationController
 		# 	result.push(Net::HTTP.get(URI.parse('http://www.omdbapi.com?i=tt0111161')))
 		# end
 
+		respond_with(movies) do |format|
+			format.json { render :json => movies.as_json }
+		end
+	end
+
+	def last
+		movies = Movie.limit(3).order("created_at desc")
 		respond_with(movies) do |format|
 			format.json { render :json => movies.as_json }
 		end

@@ -3,7 +3,6 @@ class FavoritsController < ApplicationController
 
 
 	def index
-		puts params[:user_id]
 		favorits = Favorit.where(user_id: params[:user_id])
 		
 		respond_with(favorits) do |format|

@@ -4,14 +4,16 @@ angular.module('homeflix', [
 	'userModule',
 	'movieModule',
 	'navigationModule',
-	'playerModule'
+	'playerModule',
+	'homeModule'
 ]);
 
 angular.module('homeflix').config(['$routeProvider',
   	function($routeProvider) {
 	    $routeProvider.
 	    	when('/home', {
-	        	templateUrl: '<%= asset_path("home.html")%>'
+	        	templateUrl: '<%= asset_path("home.html")%>',
+	        	controller: 'HomeController'
 	      	}).
 	      	when('/users', {
 	        	templateUrl: '<%= asset_path("users.html")%>',
@@ -28,6 +30,10 @@ angular.module('homeflix').config(['$routeProvider',
 	      	when('/movies/:imdb_id', {
 	      		templateUrl: '<%= asset_path("movie-detail.html")%>',
 	        	controller: 'MovieDetailedController'
+	      	}).
+	      	when('/favorits', {
+	      		templateUrl: '<%= asset_path("favorits.html")%>',
+	        	controller: 'FavoritListController'
 	      	}).
 	      	when('/player/:imdb_id', {
 	      		templateUrl: '<%= asset_path("player.html")%>',

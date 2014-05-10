@@ -1,1 +1,20 @@
-hahahha
+<carousel interval="sliderInterval">
+    <slide ng-repeat="movie in movies" active="slide.active">
+       	<div class="carousel-caption">
+       		<div class="carousel-poster">
+       			<a href="#/player/{{movie.imdbID}}" class="poster poster-large">
+					<div class="poster-overlay poster-play"></div>
+			  		<img ng-src="{{movie.Poster}}">
+				</a>
+        	</div>
+        	<div class="carousel-content">
+        		<h2>{{movie.Title}}</h2>
+          		<p>{{movie.Plot}}</p>
+        	</div>
+        </div>
+    </slide>    
+</carousel>
+
+<div class="container">
+	<!-- {{movies}} -->
+</div>

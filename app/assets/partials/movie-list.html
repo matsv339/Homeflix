@@ -1,9 +1,10 @@
-<div class="form-group has-feedback">
-  <input type="text" class="form-control" ng-model="query" placeholder="Search movie">
-</div>
-<div class="container-fluid">
+<div class="container">
+	<div class="search-field">
+		<input type="text" class="form-control" ng-model="query" placeholder="Search movie">
+	</div>
+	
 	<a href="#/movies/{{movie.imdbID}}" class="poster poster-small pull-left" ng-repeat="movie in movies | filter:query | orderBy:'Title':true">
 		<div class="poster-overlay"></div>
-  		<img ng-src="{{movie.Poster}}">
+		<img ng-src="{{movie.Poster}}">
 	</a>
 </div>

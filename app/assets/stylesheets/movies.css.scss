@@ -72,3 +72,38 @@ $poster-width-large: $poster-height-large * 0.66;
 		}		
 	}
 }
+
+.search-field {
+	margin: 10px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+	margin-top: -21px;
+  	height: 500px;
+  	margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  	z-index: 10;
+  	text-align: left;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  	height: 500px;
+  	background-color: black;
+}
+
+.carousel-content {
+	margin-left: 10px;
+	
+}
+
+.carousel-poster {
+	
+}

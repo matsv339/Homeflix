@@ -1,3 +1,46 @@
 // Place all the styles related to the Favorits controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$favorit-height-small: 220px;
+$favorit-hr-margin: 5px;
+$favorit-container-height: $favorit-height-small + 2 * $favorit-hr-margin + 1;
+
+.favorit-container {
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: $favorit-container-height;
+	overflow: hidden;
+	h5{
+		display: block;
+	}
+
+}
+
+.favorit-content {
+	
+	margin-right: 0px;
+}
+
+.favorit-head {
+	height: 50px;
+}
+
+.favorit-hr {
+	position: relative;
+	width: 100%;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.favorit-remove {
+	display: block;
+	margin-top: 10px;
+	clear: right;
+	&:hover {
+		color: grey;
+	}
+}
