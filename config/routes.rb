@@ -15,6 +15,11 @@ Homeflix::Application.routes.draw do
   delete 'favorits/:user_id/:imdb_id' => 'favorits#destroy'
   post 'favorits/:user_id/:imdb_id' => 'favorits#create'
 
+  # Comment routes
+  get 'comment/:imdb_id' => 'comments#index'
+  delete 'comment/:imdb_id/:user_id/:comment_id' => 'comments#destroy'
+  post 'comment/:imdb_id/:user_id' => 'comments#create'
+
   # IMDB routes 
   get '/imdb' => 'imdb#index'
 

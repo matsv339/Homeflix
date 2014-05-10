@@ -1,0 +1,22 @@
+<div class="comment" ng-controller="CommentController">
+	<h2>Comments</h2>
+	<hr>
+	<ul class="comment-feed">
+		<li ng-repeat="comment in comments | orderBy:'created_at':true | limitTo: limit">
+			<p><strong>Username</strong> {{comment.created_at}}</p>
+			{{comment.content}}
+		</li>
+	</ul>
+	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Leave a comment</button>
+	<hr>
+	<div collapse="isCollapsed">
+		<form role="form" ng-submit="comment()">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Leave a comment</label>
+				<textarea ng-model="content" class="form-control" rows="5"></textarea>
+				<br>
+				<input type="submit" class="btn btn-primary" value="Comment">
+			</div>
+		</form>
+	</div>
+</div>

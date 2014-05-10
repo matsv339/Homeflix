@@ -60,6 +60,10 @@ Favorit.create(user_id:"2", imdb_id:"tt0111161")
 Favorit.create(user_id:"2", imdb_id:"tt0110912")
 Favorit.create(user_id:"2", imdb_id:"tt0068646")
 
+Comment.create(user_id:"1", imdb_id:"tt0110912", content:"This is a comment.")
+Comment.create(user_id:"1", imdb_id:"tt0110912", content:"This is a second comment.")
+Comment.create(user_id:"2", imdb_id:"tt0110912", content:"Guess what?")
+Comment.create(user_id:"2", imdb_id:"tt0068646", content:"New movie.")
 
 
 # Movie.create(user_id:"1", imdb_id:"tt0110912") #Pulp Fiction

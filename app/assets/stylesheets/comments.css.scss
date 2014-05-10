@@ -1,0 +1,19 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-feed {
+	list-style: none;
+	padding: 0px;
+	li {
+		line-height: 8px;
+		display: block;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #f7f7f7;
+
+		margin-top: 10px;
+	}
+}

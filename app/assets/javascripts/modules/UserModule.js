@@ -1,1 +1,1 @@
-angular.module('userModule', ['serviceModule', 'imdbModule']);
+angular.module('userModule', ['imdbModule']);

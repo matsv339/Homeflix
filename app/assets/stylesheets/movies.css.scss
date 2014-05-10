@@ -86,13 +86,15 @@ $carousel-height: 400px;
 	}
 }
 
-.search-field {
-	margin: 10px;
+.comment {
+	margin-top: 50px;
 }
 
 /* Home
 -------------------------------------------------- */
-
+textarea {
+	resize: none;
+}
 /*.home-title {
 	position: absolute;
 	top: 21;
