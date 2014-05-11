@@ -18,8 +18,7 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-
-		comment = Comment.create(user_id: params[:user_id], imdb_id: params[:imdb_id], content: params[:content])
+		Comment.create(user_id: params[:user_id], imdb_id: params[:imdb_id], content: params[:content])
 
 		head :ok
 	end

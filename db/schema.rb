@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510180829) do
+ActiveRecord::Schema.define(version: 20140511195849) do
 
   create_table "comments", force: true do |t|
     t.string   "user_id"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140510180829) do
     t.string   "Metascore"
     t.string   "imdbRating"
     t.string   "imdbVotes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ratings", force: true do |t|
+    t.string   "user_id"
+    t.string   "imdb_id"
+    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

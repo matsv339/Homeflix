@@ -11,11 +11,12 @@
 		<div class="col-md-8 col-sm-6 col-xs-12">
 			<h1>{{movie.Title}}</h1>
 			<h4>{{movie.Genre}} - {{movie.Runtime}}</h4>
+
 			<p>
 				{{movie.Year}} | {{movie.Rated}} |
-				<!-- <span ng-repeat="i in rating track by $index" class="glyphicon glyphicon-star"></span> -->
-				<rating ng-model="rate" readonly="true" max="max" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+				IMDB <rating class="rating-stars" ng-model="rate" readonly="true" max="max" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
 			</p>
+
 			<p>{{movie.Plot}}</p>
 			<p><strong>Director:</strong> {{movie.Director}}</p>
 			<p><strong>Writer:</strong> {{movie.Writer}}</p>
@@ -23,8 +24,10 @@
 			<form ng-controller="FavoritController" ng-submit="updateFavorits()">
 				<button class="btn" ng-class="{'btn-success': !is_favorit, 'btn-danger': is_favorit}">{{favorit_text}}</button>
 			</form>
-			
+			<div class="rating-box" ng-include="'<%= asset_path("rating.html")%>'"></div>
 		</div>
 	</div>
+
+
 	<div ng-include="'<%= asset_path("comment.html")%>'"></div>
 </div>

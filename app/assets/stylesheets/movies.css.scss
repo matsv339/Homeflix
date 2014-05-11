@@ -36,6 +36,7 @@ $carousel-height: 400px;
 }
 
 .poster-large {
+	margin-top: 25px;
 	width: $poster-width-large;
 	height: $poster-height-large;
 }
@@ -145,4 +146,10 @@ textarea {
 	margin-right: 40px;
 	width: $poster-width-carousel;
 	height: $poster-height-carousel;
+}
+
+.rating-stars {
+	font-size: 15px;
+	line-height: 15px;
+	outline: none;
 }

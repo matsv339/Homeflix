@@ -1,13 +1,13 @@
-//Inserts a poster from IMDB given a ID as an attribute.
-angular.module('imdbModule').directive('ngPoster', function () {
-	return {
-		restrict: 'EA',
-		scope: true,
-		templateUrl: '<%= asset_path("poster.html")%>',
-		controller: 'IMDBController',
-		link: function(scope, elem, attrs, ctrl) {
-			scope.getMovie(attrs.imdbid);
-		},
-		replace: true
-	}
-});
+// //If condition is correct insert tamplet.
+// angular.module('commentModule').directive('ngCondition', function () {
+// 	return {
+// 		restrict: 'E',
+// 		scope: true,
+// 		template: '<span class="pull-right glyphicon glyphicon-remove" tooltip="Remove comment" tooltip-placement="left" tooltip-popup-delay="100"></span>',
+// 		controller: 'CommentController',
+// 		link: function(scope, elem, attrs, ctrl) {
+			
+// 		},
+// 		replace: true
+// 	}
+// });

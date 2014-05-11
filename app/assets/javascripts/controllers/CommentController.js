@@ -1,4 +1,4 @@
-angular.module('commentModule').controller('CommentController', function($scope, Comments, $http, $filter, $routeParams, $rootScope) {
+angular.module('movieModule').controller('CommentController', function($scope, Comments, $http, $filter, $routeParams, $rootScope) {
 	
 	$scope.imdb_id = $routeParams.imdb_id;
 	$scope.comments = Comments.index({imdb_id: $scope.imdb_id});

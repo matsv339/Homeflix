@@ -1,0 +1,8 @@
+<div ng-controller="RatingsController">
+	<hr>
+		<strong>{{rating_text}}</strong><br>
+		<rating class="rating-stars" ng-click="rateMovie()" ng-model="rate" max="max"></rating><br>
+  		<small>Average {{average}} start on {{votes}} votes.</small>	  		
+	<hr>	
+</div>
+

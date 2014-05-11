@@ -20,9 +20,14 @@ Homeflix::Application.routes.draw do
   delete 'comment/:imdb_id/:user_id/:comment_id' => 'comments#destroy'
   post 'comment/:imdb_id/:user_id' => 'comments#create'
 
+  # Rating routes
+  get 'ratings/:imdb_id' => 'ratings#index'
+  get 'ratings/:imdb_id/:user_id' => 'ratings#show'
+  put 'ratings/:imdb_id/:user_id' => 'ratings#update'
+  post 'ratings/:imdb_id/:user_id' => 'ratings#create'
+
   # IMDB routes 
   get '/imdb' => 'imdb#index'
-
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
