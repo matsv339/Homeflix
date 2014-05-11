@@ -1,20 +1,34 @@
-angular.module('playerModule').controller('PlayerController', function($scope, $routeParams, $location) {
+angular.module('playerModule').controller('PlayerController', function($scope, $rootScope, $routeParams, $location) {
     //Find the movie on server
-    // $scope.moviePath = "assets/" + $routeParams.imdb_id + ".mp4";
-    //Override to only play sample video
-    $scope.moviePath = '<%= asset_path("tt1229340.mp4")%>';
+    $scope.moviePath = "assets/" + $routeParams.imdb_id + ".mp4";
     //Initialises the player
-    videojs("player", {controls: true, preload: "auto", autoplay: true, width: "100%", height: "100%"}, function() {
-        player = this;
-        player.pause();
-        player.src($scope.moviePath);    
-        player.play();
-    });
-        
-    //Routes back to the spesific movie page when the movie finish.
-    player.on("ended", function() {
-        $location.path('/movies/' + $routeParams.imdb_id);
-        $scope.$apply();
+    $scope.init = function() {
+        $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
+        videojs("player", {preload: "auto", autoplay: false}, function() {
+            $scope.player = this;
+            $scope.player.height("100%");
+            $scope.player.width("100%");
+            $scope.player.controls(true);
+            $scope.player.src($scope.moviePath); 
+            $scope.player.play();
+        });
+    };
+
+    $scope.init();   
+
+    //Removes the player when route from player. 
+    $rootScope.$on("$locationChangeStart", function(event, next, current){
+        url = "http://" + $location.host() + ":" + $location.port() + "/#/player/" + $routeParams.imdb_id;
+        if (url == current && $scope.player) {
+            try {
+                $scope.player.dispose();    
+            }
+            //Hides a wierd error in the player cleanup.
+            catch(error) {
+                // console.log(error);
+            }
+            
+        }
     });
 });
 
