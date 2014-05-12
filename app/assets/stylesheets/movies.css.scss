@@ -17,21 +17,25 @@ $carousel-height: 400px;
 	position: relative;
 	overflow: hidden;
 	display: block;
-
+	overflow: hidden;
 	img {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: auto;
+		width: 100%;
 		height: 100%;
-
 	}
 }
 
+.margin-10 {
+	margin: 10px !important;
+}
+
 .poster-small {
+	margin-left: auto;
+	margin-right: auto;
 	width: $poster-width-small;
 	height: $poster-height-small;
-	margin-right: 20px;
 	margin-bottom: 20px;
 }
 
@@ -85,6 +89,12 @@ $carousel-height: 400px;
 			color:white;
 		}		
 	}
+}
+
+.shadow {
+	-webkit-box-shadow: 8px 8px 20px -2px rgba(0,0,0,0.6);
+	-moz-box-shadow: 8px 8px 20px -2px rgba(0,0,0,0.6);
+	box-shadow: 8px 8px 20px -2px rgba(0,0,0,0.6);
 }
 
 .comment {

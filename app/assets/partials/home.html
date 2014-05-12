@@ -1,7 +1,7 @@
 <carousel interval="sliderInterval">
     <slide ng-repeat="movie in movies" active="slide.active">
        	<div class="carousel-content">
-            <a href="#/movies/{{movie.imdb_id}}" class="poster poster-carousel">
+            <a href="#/movies/{{movie.imdb_id}}" class="poster poster-carousel shadow">
                 <div class="poster-overlay"></div>
                 <img ng-src="{{movie.Poster}}">
             </a>                

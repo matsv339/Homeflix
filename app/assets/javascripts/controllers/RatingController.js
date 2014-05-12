@@ -3,13 +3,11 @@ angular.module('movieModule').controller('RatingsController', function($scope, $
   	$scope.max = 5;
   	
   	Ratings.index({imdb_id: $scope.imdb_id}, function(data) {
-  		// console.log(data);
   		$scope.average = data.average;
   		$scope.votes = data.votes;
   	});
 
     Ratings.show({user_id: $rootScope.current_user, imdb_id: $scope.imdb_id}, function(data) {
-    	console.log(data);
 		if (data.respons == "null") {
 			$scope.rate = 0;
 			$scope.old_rating = 0;

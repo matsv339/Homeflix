@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="#/player/{{movie.imdb_id}}" class="poster poster-large pull-left">
+			<a href="#/player/{{movie.imdb_id}}" class="poster poster-large pull-left shadow">
 				<!-- <div class="ttt"></div> -->
 				<div class="poster-overlay poster-play"></div>
 		  		<img ng-src="{{movie.Poster}}">
@@ -24,7 +24,9 @@
 			<form ng-controller="FavoritController" ng-submit="updateFavorits()">
 				<button class="btn" ng-class="{'btn-success': !is_favorit, 'btn-danger': is_favorit}">{{favorit_text}}</button>
 			</form>
+			<hr>
 			<div class="rating-box" ng-include="'<%= asset_path("rating.html")%>'"></div>
+			<hr>
 		</div>
 	</div>
 
