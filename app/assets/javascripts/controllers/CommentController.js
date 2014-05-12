@@ -3,7 +3,7 @@ angular.module('movieModule').controller('CommentController', function($scope, C
 	$scope.imdb_id = $routeParams.imdb_id;
 	$scope.comments = Comments.index({imdb_id: $scope.imdb_id});
 	$scope.isCollapsed = true;
-	$scope.limit = 3;
+	$scope.limit = 5;
 
 	//Creates a comment in the database
 	$scope.comment = function() {

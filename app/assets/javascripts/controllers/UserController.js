@@ -1,6 +1,7 @@
-angular.module('userModule').controller('UserController', function($scope, $http, Users, Movies) {
+angular.module('userModule').controller('UserController', function($scope, Users, $rootScope) {
+	//Just for testign differnet users
 	$scope.users = Users.index();
-	$scope.a = "hej";
-
-	
+	$scope.switch = function(id) {
+		$rootScope.current_user = id;
+	}	
 });

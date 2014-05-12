@@ -4,12 +4,11 @@
 <div>
   <h1>{{ 1 + 3 }} och {{ test }}</h1>
   Search: <input ng-model="key">
-  <br>
-  <button ng-click="search()" class="btn btn-default">Hej</button>
   <ul>
-    <li ng-repeat="r in res ">
-      <p>{{r.Title}}</p>
+    <li ng-repeat="user in users">
+      <p>Username: {{user.username}}</p>
+      <p>User ID: {{user.id}}</p>
+      <a ng-click="switch(user.id)">Switch</a>
     </li>
   </ul>
-<a href="#/home"></a>
 </div>

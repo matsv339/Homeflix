@@ -18,7 +18,7 @@
 			<div class="panel panel-default">
 			  	<div class="panel-heading">
 			  		<span class="pull-right comment-remove glyphicon glyphicon-remove" ng-if="comment.user_id == current_user" tooltip="Remove comment" tooltip-placement="left" tooltip-popup-delay="100"></span>
-			  		<strong>Username</strong> - <small>{{formatTime(comment.created_at)}}</small>
+			  		<strong>{{comment.username}}</strong> - <small>{{formatTime(comment.created_at)}}</small>
 			  	</div>
 			  	<div class="panel-body">
 			  		{{comment.content}}

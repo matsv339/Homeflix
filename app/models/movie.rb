@@ -3,6 +3,6 @@ class Movie < ActiveRecord::Base
 
 	def self.search(search)
 		search_condition = "%" + search + "%"
-		find(:all, :conditions => ["Title LIKE ? OR Actors LIKE ? OR Year LIKE ? OR Director LIKE ? OR Writer LIKE ? OR Genre LIKE ? OR imdb_id LIKE ?", search_condition, search_condition, search_condition, search_condition, search_condition, search_condition, search_condition])
+		find(:all, :limit => 5, :conditions => ["Title LIKE ? OR Actors LIKE ? OR Year LIKE ? OR Director LIKE ? OR Writer LIKE ? OR Genre LIKE ? OR imdb_id LIKE ?", search_condition, search_condition, search_condition, search_condition, search_condition, search_condition, search_condition])
 	end
 end
