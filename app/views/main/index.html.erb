@@ -1,5 +1,11 @@
 <div ng-include="'<%= asset_path("navbar.html")%>'"></div>
-<div ng-view></div>
+<div ng-view></div> 
+
+        Signed in as <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+
+
+
 <!-- <input type="text" ng-model="r">
 <div ng-init="rating = 5">
 	Rating is {{rating}} <br/>

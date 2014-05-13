@@ -1,0 +1,3 @@
+angular.module('serviceModule').service('Sessions', function($resource){
+  return  $resource('/sessions.json', {}, {'show': { method: 'GET'}});
+});
