@@ -1,4 +1,4 @@
-angular.module('movieModule').controller('MovieListController', function($scope, Movies, IMDB, Genre) {
+angular.module('movieModule').controller('MovieListController', function($scope, Genre) {
     $scope.genre = ["Action", 
                     "Crime", 
                     "Drama", 
@@ -24,14 +24,8 @@ angular.module('movieModule').controller('MovieListController', function($scope,
                     "War"];
 
     $scope.createGenre = function(genres, genre) {
-        
-        // console.log("Genre: " + value);
         Genre.genre({genre: genre}, function(data) {
-            console.log(genre);
-            console.log(data);
             $scope.genres.push({genre: genre, data: data, lenght: data.lenght});
-
-            // console.log($scope.  movies);
         });
     }
 
