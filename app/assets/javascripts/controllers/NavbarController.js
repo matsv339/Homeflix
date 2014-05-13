@@ -19,4 +19,14 @@ angular.module('navigationModule').controller('NavbarController', function($scop
 		});
 	}
 
+	$scope.items = [
+	    'Sign out'
+	];
+
+	$scope.toggleDropdown = function($event) {
+	    $event.preventDefault();
+	    $event.stopPropagation();
+	    $scope.status.isopen = !$scope.status.isopen;
+	};
+
 });

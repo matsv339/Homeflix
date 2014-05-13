@@ -87,17 +87,17 @@ movies.each do |item|
 end
 puts "Total movies added: " + count.to_s
 
-User.create(username:"Mattias", password:"123")
-User.create(username:"Gustav", password:"321")
-User.create(username:"Erik", password:"231")
+# User.create(username:"Mattias", password:"123")
+# User.create(username:"Gustav", password:"321")
+# User.create(username:"Erik", password:"231")
 
 Favorit.create(user_id:"1", imdb_id:"tt0110912")
 Favorit.create(user_id:"1", imdb_id:"tt0068646")
-Favorit.create(user_id:"2", imdb_id:"tt0111161")
-Favorit.create(user_id:"2", imdb_id:"tt0110912")
-Favorit.create(user_id:"2", imdb_id:"tt0068646")
+# Favorit.create(user_id:"2", imdb_id:"tt0111161")
+# Favorit.create(user_id:"2", imdb_id:"tt0110912")
+# Favorit.create(user_id:"2", imdb_id:"tt0068646")
 
 Comment.create(user_id:"1", imdb_id:"tt0110912", content:"This is a comment.")
 Comment.create(user_id:"1", imdb_id:"tt0110912", content:"This is a second comment.")
-Comment.create(user_id:"2", imdb_id:"tt0110912", content:"Guess what?")
-Comment.create(user_id:"2", imdb_id:"tt0068646", content:"New movie.")
+# Comment.create(user_id:"2", imdb_id:"tt0110912", content:"Guess what?")
+# Comment.create(user_id:"2", imdb_id:"tt0068646", content:"New movie.")
