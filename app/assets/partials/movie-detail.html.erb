@@ -1,4 +1,4 @@
-<div class="container">
+<div ng-if="valid_id" class="container">
 	<div class="row">
 		<div class="col-md-4 col-sm-6 col-xs-12">
 			<a href="#/player/{{movie.imdb_id}}" class="poster poster-large pull-left shadow">
@@ -32,4 +32,7 @@
 
 
 	<div ng-include="'<%= asset_path("comment.html")%>'"></div>
+</div>
+<div ng-if="!valid_id" class="container">
+	<h1>Invalid movie id</h1>
 </div>

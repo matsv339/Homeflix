@@ -1,13 +1,47 @@
-angular.module('movieModule').controller('MovieListController', function($scope, Movies, IMDB) {
+angular.module('movieModule').controller('MovieListController', function($scope, Movies, IMDB, Genre) {
+    $scope.genre = ["Action", 
+                    "Crime", 
+                    "Drama", 
+                    "Comedy", 
+                    "Western", 
+                    "Adventure", 
+                    "Fantasy", 
+                    "Sci-Fi", 
+                    "Romance", 
+                    "Animation", 
+                    "Thriller", 
+                    "History", 
+                    "Biography", 
+                    "Documentary",
+                    "Family",
+                    "Film-Noir",
+                    "Horror",
+                    "Music",
+                    "Musical",
+                    "Mystery",
+                    "Short",
+                    "Sport",
+                    "War"];
+
+    $scope.createGenre = function(genres, genre) {
+        
+        // console.log("Genre: " + value);
+        Genre.genre({genre: genre}, function(data) {
+            console.log(genre);
+            console.log(data);
+            $scope.genres.push({genre: genre, data: data, lenght: data.lenght});
+
+            // console.log($scope.  movies);
+        });
+    }
+
+    angular.forEach($scope.genre, function(value) {
+        $scope.genres = new Array;
+        $scope.createGenre($scope.genres, value);
+        
+    });
+
+    
     //Old way
-    // Movies.index(function(data) {
-    	
-    //     $scope.movies = [];
-    //     for(var i = 0;i < data.length; i++) {
-    //         IMDB.index({i: data[i].imdb_id}, function(data) {
-    //             $scope.movies.push(data);
-    //         });
-    //     }
-    // });
-	$scope.movies = Movies.index();
+	// $scope.movies = Movies.index();
 });
