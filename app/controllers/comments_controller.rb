@@ -7,9 +7,10 @@ class CommentsController < ApplicationController
 		ret = Array.new
 
 		comments.each do |comment|
-			user = User.where(id: comment.user_id).select("username")
-			puts user[0].username
-			res = {"id" => comment.id, "user_id" => comment.user_id, "imdb_id" => comment.imdb_id, "content" => comment.content, "username" => user[0].username, "created_at" => comment.created_at}
+			user = User.where(uid: comment.user_id).select("name")
+			puts user[0].name 
+			
+			res = {"id" => comment.id, "user_id" => comment.user_id, "imdb_id" => comment.imdb_id, "content" => comment.content, "username" => user[0].name, "created_at" => comment.created_at}
 			
 			ret.push(res)
 		end

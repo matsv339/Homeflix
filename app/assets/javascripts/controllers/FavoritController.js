@@ -12,7 +12,7 @@ angular.module('favoritModule').controller('FavoritController', function($scope,
     };
 
     // Check if movie is favorit
-    Favorits.index({user_id: $rootScope.current_user}, function(data) {
+    Favorits.index({user_id: $rootScope.uid}, function(data) {
         if ($scope.in_favorits($scope.imdb_id, data)) {
             $scope.is_favorit = true;
             $scope.favorit_text = "Remove from favorits";
@@ -25,13 +25,13 @@ angular.module('favoritModule').controller('FavoritController', function($scope,
     
     $scope.updateFavorits = function() { 
         if ($scope.is_favorit) {
-            Favorits.destroy({user_id: $rootScope.current_user, imdb_id: $scope.imdb_id}, function(data) {
+            Favorits.destroy({user_id: $rootScope.uid, imdb_id: $scope.imdb_id}, function(data) {
                 $scope.is_favorit = false;
                 $scope.favorit_text = "Add to favorits";
             });
         }
         else if (!$scope.is_favorit) {
-            Favorits.create({user_id: $rootScope.current_user, imdb_id: $scope.imdb_id}, function(data) {
+            Favorits.create({user_id: $rootScope.uid, imdb_id: $scope.imdb_id}, function(data) {
                 $scope.is_favorit = true;
                 $scope.favorit_text = "Remove from favorits";
             });    

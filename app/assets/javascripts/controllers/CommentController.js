@@ -7,7 +7,7 @@ angular.module('movieModule').controller('CommentController', function($scope, C
 
 	//Creates a comment in the database
 	$scope.comment = function() {
-		Comments.create({imdb_id: $scope.imdb_id, user_id: $rootScope.current_user, content: $scope.content}, function(data) {
+		Comments.create({imdb_id: $scope.imdb_id, user_id: $rootScope.uid, content: $scope.content}, function(data) {
 			$scope.comments.push()
 			$scope.content = "";
 			$scope.comments = Comments.index({imdb_id: $scope.imdb_id});
