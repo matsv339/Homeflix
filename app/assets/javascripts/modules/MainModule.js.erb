@@ -6,7 +6,9 @@ angular.module('homeflix', [
 	'navigationModule',
 	'playerModule',
 	'homeModule',
-	'ui.bootstrap'
+	'sessionModule',
+	'ui.bootstrap',
+	'ngSanitize'
 ]);
 
 angular.module('homeflix').config(['$routeProvider',
@@ -40,8 +42,14 @@ angular.module('homeflix').config(['$routeProvider',
 	      		templateUrl: '<%= asset_path("player.html")%>',
 	        	controller: 'PlayerController'
 	      	}).
+			when('/login', {
+	      		templateUrl: '<%= asset_path("login.html")%>',
+	        	controller: 'SessionsController'
+	      	}).
+
 	      	otherwise({
 	        	redirectTo: '/home'
 	      	});
   	}
 ]);
+

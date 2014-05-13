@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511195849) do
+ActiveRecord::Schema.define(version: 20140512200656) do
 
   create_table "comments", force: true do |t|
     t.string   "user_id"
@@ -60,8 +60,11 @@ ActiveRecord::Schema.define(version: 20140511195849) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "password"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

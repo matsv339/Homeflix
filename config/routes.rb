@@ -1,14 +1,20 @@
 Homeflix::Application.routes.draw do
-  root to: "main#index"
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+  get '/sessions' => 'sessions#show'
+  get '/sessions' => 'sessions#index'
+
+  root to: "main#login"
   
   # User routes
   get '/users' => 'users#index'
 
   # Movie routes 
   get '/movies' => 'movies#index'
-  get '/movies/last/' => 'movies#last'
+  get '/movies/last' => 'movies#last'
   get '/movies/:key' => 'movies#search'
-  get '/movies/genre/:genre' => 'movies#genre'
 
   # Favorit routes
   get 'favorits/:user_id' => 'favorits#index'
@@ -29,6 +35,8 @@ Homeflix::Application.routes.draw do
 
   # IMDB routes 
   get '/imdb' => 'imdb#index'
+
+  get'/index' => 'main#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

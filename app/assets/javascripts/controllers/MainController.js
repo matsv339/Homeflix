@@ -1,6 +1,15 @@
-angular.module('homeflix').controller('MainController', function($scope, $http, $rootScope) {
+angular.module('homeflix').controller('MainController', function($scope, $http, $rootScope, Sessions, $sce) {
 	var token = $("meta[name='csrf-token']").attr("content");
 	$http.defaults.headers.post['X-CSRF-Token'] = token;
 	$http.defaults.headers.put['X-CSRF-Token'] = token;
-	$rootScope.current_user = 1;
+
+	Sessions.show(function(data) {
+ 		$rootScope.allt = data;
+ 		$rootScope.currentUser = data.name;
+ 		$rootScope.uid = data.uid;	
+ 		console.log($rootScope.uid);
+ 	});
+
+ 	console.log($rootScope.uid);
 });
+
