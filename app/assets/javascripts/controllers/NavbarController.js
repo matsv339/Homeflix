@@ -29,4 +29,6 @@ angular.module('navigationModule').controller('NavbarController', function($scop
 	    $scope.status.isopen = !$scope.status.isopen;
 	};
 
+	$scope.help = {content: "Search for titles, actors etc.", title: "Guide"};
+
 });

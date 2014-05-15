@@ -1,14 +1,22 @@
-<ng-Movie imdbid="tt0111161"></ng-Movie>
-<h1>My blog</h1>
-
-<div>
-  <h1>{{ 1 + 3 }} och {{ test }}</h1>
-  Search: <input ng-model="key">
-  <ul>
-    <li ng-repeat="user in users">
-      <p>Username: {{user.username}}</p>
-      <p>User ID: {{user.id}}</p>
-      <a ng-click="switch(user.id)">Switch</a>
-    </li>
-  </ul>
+<div class="container">
+	<ng-Movie imdbid="tt0111161"></ng-Movie>
+	<h1>Users</h1>
+	<hr>
+  	<input class="form-control" ng-model="key" placeholder="Search..."><br>
+  	<table class="table table-striped">
+  		<tr>
+  			<th>Id</th>
+  			<th>Name</th>
+  			<th>uid</th>
+  			<th>Created at</th>
+  			<th>oAout token</th>
+  		</tr>
+  		<tr ng-repeat="user in users | filter: key">
+  			<td>{{user.id}}</td>
+  			<td>{{user.name}}</td>
+  			<td>{{user.uid}}</td>
+  			<td>{{user.created_at}}</td>
+  			<td>{{user.oauth_token}}</td>
+  		</tr>
+	</table>
 </div>
