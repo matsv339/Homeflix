@@ -13,6 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
+//= require angular-resource
+//= require angular-route
+//= require angular-sanitize
+//= require angular-websocket
 
 //= require video
 //= require bootstrapUI
