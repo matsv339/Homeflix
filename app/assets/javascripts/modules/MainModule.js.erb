@@ -8,6 +8,7 @@ angular.module('homeflix', [
 	'homeModule',
 	'sessionModule',
 	'ui.bootstrap',
+	'newsModule',
 	'ngSanitize'
 ]);
 
@@ -45,6 +46,10 @@ angular.module('homeflix').config(['$routeProvider',
 			when('/login', {
 	      		templateUrl: '<%= asset_path("login.html")%>',
 	        	controller: 'SessionsController'
+	      	}).
+	      	when('/news', {
+	      		templateUrl: '<%= asset_path("news.html")%>',
+	        	controller: 'NewsController'
 	      	}).
 
 	      	otherwise({

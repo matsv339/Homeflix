@@ -6,10 +6,10 @@ class ApplicationController < ActionController::Base
   # before_filter :intercept_html_requests
 
   helper_method :current_user
-  helper_method :check_login
  
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    redirect_to 'http://www.google.com'
   end
 
  

@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
 
   def show
   	user = User.find(session[:user_id])
+    puts session[:user_id]  
   	respond_to do |format|
 			format.json { render :json => user.as_json }
 		end
