@@ -6,6 +6,7 @@ angular.module('homeflix').controller('MainController', function($scope, $http, 
 	Sessions.show(function(data) {
 		// console.log(data);
  		$rootScope.current_user = data;
+ 		console.log(data);
  		
  	});
 });
