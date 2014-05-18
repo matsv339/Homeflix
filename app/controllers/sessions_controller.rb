@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 
   def create
   	user = User.from_omniauth(env["omniauth.auth"])
-    # if User.find_by(uid: user.uid)
-    #   user.save!
-    #   session[:user_id] = user.id
-    # else
+    if User.find_by(uid: user.uid)
+      user.save!
+      session[:user_id] = user.id
+    else
       user.save!
       session[:user_id] = user.id
       oauth_token = user.oauth_token
@@ -15,8 +15,7 @@ class SessionsController < ApplicationController
       res = Net::HTTP.get(uri)
       email = JSON.parse(res)["data"]["email"]
       UserMailer.welcome_email(user, email).deliver
-      # ContactMailer.contact().deliver
-    # end
+    end
     redirect_to '/index'
   end
 

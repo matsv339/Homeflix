@@ -28,7 +28,7 @@
                 </li>
             </ul>
             <form class="navbar-form navbar-right">
-                <input type="text" popover="{{help.content}}" popover-trigger="focus" popover-placement="bottom" ng-model="selected" typeahead="movie as movie.Title for movie in search($viewValue)" class="form-control"  typeahead-on-select="onSelect($item, $model, $label)" typeahead-template-url="<%= asset_path("search.html")%>" placeholder="Search movie...">
+                <input type="text" popover="{{help.content}}" popover-trigger="focus" popover-placement="left" ng-model="selected" typeahead="movie as movie.Title for movie in search($viewValue)" class="form-control"  typeahead-on-select="onSelect($item, $model, $label)" typeahead-template-url="<%= asset_path("search.html")%>" placeholder="Search movie...">
             </form>
             
         </div><!--/.nav-collapse -->
