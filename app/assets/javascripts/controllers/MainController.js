@@ -4,10 +4,11 @@ angular.module('homeflix').controller('MainController', function($scope, $http, 
 	$http.defaults.headers.put['X-CSRF-Token'] = token;
 
 	Sessions.show(function(data) {
-		// console.log(data);
- 		$rootScope.current_user = data;
- 		console.log(data);
- 		
+		current_user = data;
+		delete current_user.oauth_token;
+		delete current_user.oauth_expires_at;
+		delete current_user.provider;
+ 		$rootScope.current_user = current_user;
  	});
 });
 

@@ -6,7 +6,7 @@ angular.module('newsModule').controller('NewsController', function($scope, $http
                         $scope.feed = data.responseData.feed;
                         $scope.entries = data.responseData.feed.entries;
                			
-                        console.log($scope.feed.entries);
+                        
 
 
                     });	

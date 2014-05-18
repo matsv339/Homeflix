@@ -3,6 +3,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
     $scope.moviePath = "assets/" + $routeParams.imdb_id + ".mp4";
     //Initialises the player
     $scope.init = function() {
+
         $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
         videojs("player", {preload: "auto", autoplay: false}, function() {
             $scope.player = this;
@@ -11,6 +12,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             $scope.player.controls(true);
             $scope.player.src($scope.moviePath); 
             $scope.player.play();
+            $rootScope.hasPlayed = true;
         });
     };
 
@@ -19,9 +21,11 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
     //Removes the player when route from player. 
     $rootScope.$on("$locationChangeStart", function(event, next, current){
         url = "http://" + $location.host() + ":" + $location.port() + "/#/player/" + $routeParams.imdb_id;
-        if (url == current && $scope.player) {
+        if ($rootScope.hasPlayed) {
             try {
                 $scope.player.dispose();    
+                // console.log("dispose");
+                $rootScope.hasPlayed = false; 
             }
             //Hides a wierd error in the player cleanup.
             catch(error) {
