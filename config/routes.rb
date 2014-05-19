@@ -16,7 +16,7 @@ Homeflix::Application.routes.draw do
   get '/movies' => 'movies#index'
   get '/movies/last' => 'movies#last'
   get '/movies/:key' => 'movies#search'
-  get '/movies/genre/:genre' => 'movies#genre'
+  get '/genres' => 'movies#genres'
 
   # Favorit routes
   get 'favorits/:user_id' => 'favorits#index'

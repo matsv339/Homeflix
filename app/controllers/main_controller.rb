@@ -6,8 +6,8 @@ class MainController < ApplicationController
   	end
 
   	def login
-  		if  session[:user_id]
-  			redirect_to "/index"
+  		if session[:user_id]
+  			redirect_to "/"
   		end
   	end
 end

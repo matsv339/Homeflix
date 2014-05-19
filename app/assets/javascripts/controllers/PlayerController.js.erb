@@ -10,7 +10,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
         $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
         //Initialises the player
         videojs("player").ready(function() {
-            console.log("ready");
+            // console.log("ready");
             $scope.player = this;
             $scope.player.height("100%");
             $scope.player.width("100%");
@@ -30,14 +30,14 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
                 $scope.timer ++;
                 //Save progress
                 if ($scope.timer % 200 == 0) {
-                    console.log("update");
+                    // console.log("update");
                     Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.player.currentTime() / $scope.player.duration() * 100})
                 };
             });
 
             //On ended event
             $scope.player.on("ended", function() {
-                console.log("ended");
+                // console.log("ended");
                 $location.path("/home");
                 $scope.$apply();
                 Progresses.destroy({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id});
@@ -55,7 +55,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             try {
                 Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.player.currentTime() / $scope.player.duration() * 100})
                 $scope.player.dispose();    
-                console.log("dispose");
+                // console.log("dispose");
                 $rootScope.hasPlayed = false; 
             }
             //Hides a wierd error in the player cleanup.

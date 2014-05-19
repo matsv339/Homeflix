@@ -1,12 +1,12 @@
 <div class="container">
 	<h1>Movies</h1>
-	<input class="form-control" ng-model="query.genre" placeholder="Search for genre...">
-	<div ng-repeat="movies in genres | filter: query | orderBy: 'genre'">
-		<div ng-if="movies.data.length != 0" class="row">
+	<input class="form-control" ng-model="query.name" placeholder="Search for genre...">
+	<div ng-repeat="genre in genres | filter: query | orderBy: 'name'">
+		<div ng-if="genre.data.length != 0" class="row">
 			<hr>
-			<h1 class="text-center">{{movies.genre | uppercase}}</h1>
+			<h1 class="text-center">{{genre.name | uppercase}}</h1>
 			<hr>
-			<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in movies.data | orderBy:'Title':false">
+			<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in genre.data | orderBy:'Title':false">
 				<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small shadow">
 					<div class="poster-overlay"></div>
 					<img ng-src="{{movie.Poster}}">

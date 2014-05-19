@@ -9,11 +9,8 @@ angular.module('movieModule').controller('MovieDetailedController', function($sc
 			$scope.rate = Math.round($scope.movie.imdbRating/2);
 			$scope.valid_id = true;
             Progresses.show({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id}, function(data) {
-                console.log(data.progress);
                 $scope.progress = data.progress;
             });
-            
-            // console.log($scope.progress);
 		};
     });
 });
