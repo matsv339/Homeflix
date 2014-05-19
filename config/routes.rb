@@ -6,7 +6,8 @@ Homeflix::Application.routes.draw do
   get '/sessions' => 'sessions#show'
   get '/sessions' => 'sessions#index'
 
-  root to: "main#login"
+  root to: 'main#index'
+  get'/login' => "main#login"
   
   # User routes
   get '/users' => 'users#index'
@@ -34,10 +35,14 @@ Homeflix::Application.routes.draw do
   put 'ratings/:imdb_id/:user_id' => 'ratings#update'
   post 'ratings/:imdb_id/:user_id' => 'ratings#create'
 
+  # Progress routes
+  get 'progresses/:imdb_id/:user_id' => 'progress#show'
+  post 'progresses/:imdb_id/:user_id' => 'progress#create'
+  put 'progresses/:imdb_id/:user_id' => 'progress#update'
+  delete 'progresses/:imdb_id/:user_id' => 'progress#destroy'
+
   # IMDB routes 
   get '/imdb' => 'imdb#index'
-
-  get'/index' => 'main#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

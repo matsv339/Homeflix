@@ -16,12 +16,13 @@ class SessionsController < ApplicationController
       email = JSON.parse(res)["data"]["email"]
       UserMailer.welcome_email(user, email).deliver
     end
-    redirect_to '/index'
+    redirect_to root_path
+    
   end
 
   def destroy
   	 session[:user_id] = nil
-    redirect_to root_path
+     redirect_to '/login'
   end
 
   def show
