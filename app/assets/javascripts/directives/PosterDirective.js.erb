@@ -1,13 +1,13 @@
 //If condition is correct insert tamplet.
-angular.module('homeflix').directive('ngMattias', function () {
+angular.module('movieModule').directive('myProfile', function () {
 	return {
 		restrict: 'AE',
 		scope: true,
-		template: '<div ng-bind-html="kbk(item.content)"></div>',
-		controller: 'NewsController',
+		templateUrl: '<%= asset_path("last_watched.html.erb")%>',
+		controller: 'ProfileController',
 		link: function(scope, elem, attrs, ctrl) {
 			
 		},
-		replace: true
+		// replace: true
 	}
 });

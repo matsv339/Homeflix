@@ -18,11 +18,11 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             $scope.player.width("100%");
             $scope.player.controls(true);
             $scope.player.src($scope.moviePath); 
-            $scope.loading = 100;
-
+            
             //One duration change event.
             //This is where we update the current time.
             $scope.player.one("durationchange", function() {
+                $scope.loading = 100;
                 $scope.player.currentTime($scope.progress / 100 * $scope.player.duration());
                 $(".progress-bar-loader").fadeOut(function() {
                         $(".loading-screen").fadeOut(function() {
@@ -45,7 +45,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             //On ended event
             $scope.player.on("ended", function() {
                 // console.log("ended");
-                $location.path("/home");
+                $location.path("/movies/" + $scope.imdb_id);
                 $scope.$apply();
                 Progresses.destroy({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id});
             });

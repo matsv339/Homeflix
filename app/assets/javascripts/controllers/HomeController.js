@@ -1,4 +1,4 @@
-angular.module('homeModule').controller('HomeController', function($scope, LastMovies) {
+angular.module('homeModule').controller('HomeController', function($scope, $rootScope, LastMovies) {
 	LastMovies.index(function(data) {
 		$scope.movies = data;
 		angular.forEach(data, function(value, key) {
@@ -6,5 +6,8 @@ angular.module('homeModule').controller('HomeController', function($scope, LastM
 		});
 			
 	});
+	
+	// $scope.reasent_movies = Profile.last_watched({user_id: $rootScope.current_user.id});
+
 	$scope.sliderInterval = 5000;  	
 });

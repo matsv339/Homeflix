@@ -1,0 +1,15 @@
+<h1>Last seen</h1>
+<div class="favorit-container" ng-repeat="movie in reasent_movies">
+	<hr class="favorit-hr">
+	
+	<a href="#/movies/{{movie.data.imdb_id}}" class="poster poster-small pull-left margin-10">
+		<div class="poster-overlay"></div>
+		<img ng-src="{{movie.data.Poster}}">
+	</a>
+	<div class="favorit-head">
+		<h4 class="pull-left"><a href="#/movies/{{movie.data.imdb_id}}">{{movie.data.Title}}</a></h4>
+	</div>	
+	<h5>{{movie.data.Genre}} - {{movie.data.Runtime}}</h5>
+	<progressbar value="movie.progress"></progressbar>
+	<p>{{movie.data.Plot}}</p>
+</div>

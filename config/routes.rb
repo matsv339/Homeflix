@@ -41,6 +41,9 @@ Homeflix::Application.routes.draw do
   put 'progresses/:imdb_id/:user_id' => 'progress#update'
   delete 'progresses/:imdb_id/:user_id' => 'progress#destroy'
 
+  # Profile routes
+  get 'profile/last_watched' => 'profiles#last_watched'
+
   # IMDB routes 
   get '/imdb' => 'imdb#index'
   
