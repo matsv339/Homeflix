@@ -12,6 +12,7 @@ $poster-height-carousel: 300px;
 $poster-width-carousel: $poster-height-carousel * 0.66; 
 
 $carousel-height: 400px;
+$progressbar-width: 80%;
 
 .poster {
 	position: relative;
@@ -162,4 +163,22 @@ textarea {
 	font-size: 15px;
 	line-height: 15px;
 	outline: none;
+}
+
+.loading-screen {
+	position: fixed;
+	background-color: black;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5001;
+}
+
+.progress-bar-loader {
+	position: fixed;
+	top: 50%;
+	width: $progressbar-width;
+	left: 50%;
+	margin-left: -$progressbar-width / 2;
 }

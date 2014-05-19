@@ -2,26 +2,33 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
     //Find the movie on server
     $scope.imdb_id = $routeParams.imdb_id;
     $scope.moviePath = "assets/" + $scope.imdb_id + ".mp4";
-    
+    $scope.loading = 0;
     
     Progresses.show({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id}, function(data) {
+        $scope.loading = 33;
         $scope.progress = data.progress;
         
         $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
         //Initialises the player
         videojs("player").ready(function() {
+            $scope.loading = 66;
             // console.log("ready");
             $scope.player = this;
             $scope.player.height("100%");
             $scope.player.width("100%");
             $scope.player.controls(true);
             $scope.player.src($scope.moviePath); 
-            
+            $scope.loading = 100;
+
             //One duration change event.
             //This is where we update the current time.
             $scope.player.one("durationchange", function() {
                 $scope.player.currentTime($scope.progress / 100 * $scope.player.duration());
-                $scope.player.play();    
+                $(".progress-bar-loader").fadeOut(function() {
+                        $(".loading-screen").fadeOut(function() {
+                            $scope.player.play();        
+                        });
+                    });
             });
 
             //Update progress

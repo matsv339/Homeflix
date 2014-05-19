@@ -362,12 +362,13 @@ Positioning of the play button in the center or other corners can be done more
 easily in the skin designer. http://designer.videojs.com/
 */
 .vjs-default-skin .vjs-big-play-button {
+  display: none;
   left: 50%;
   top: 50%;
   margin-left: -2em;
   margin-top: -1.3em;
   font-size: 3em;
-  display: block;
+  /*display: block;*/
   z-index: 2;
   position: absolute;
   width: 4em;
@@ -397,6 +398,7 @@ easily in the skin designer. http://designer.videojs.com/
 }
 /* Optionally center */
 .vjs-default-skin.vjs-big-play-centered .vjs-big-play-button {
+  display: none;
   /* Center it horizontally */
   left: 50%;
   margin-left: -2.1em;
@@ -419,6 +421,7 @@ easily in the skin designer. http://designer.videojs.com/
 }
 .vjs-default-skin:hover .vjs-big-play-button,
 .vjs-default-skin .vjs-big-play-button:focus {
+  display: none;
   outline: 0;
   border-color: #fff;
   /* IE8 needs a non-glow hover state */
@@ -435,6 +438,7 @@ easily in the skin designer. http://designer.videojs.com/
   transition: all 0s;
 }
 .vjs-default-skin .vjs-big-play-button:before {
+  display: none;
   content: "\e001";
   font-family: VideoJS;
   /* In order to center the play icon vertically we need to set the line height
