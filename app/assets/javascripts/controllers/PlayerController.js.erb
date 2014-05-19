@@ -34,6 +34,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             //Update progress
             $scope.timer = 0;
             $scope.player.on("timeupdate", function() {
+                $scope.currentTime = $scope.player.currentTime();
                 $scope.timer ++;
                 //Save progress
                 if ($scope.timer % 200 == 0) {
@@ -51,6 +52,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             });
             
             $rootScope.hasPlayed = true;
+
         });
     
     });
@@ -60,7 +62,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
         url = "http://" + $location.host() + ":" + $location.port() + "/#/player/" + $routeParams.imdb_id;
         if ($rootScope.hasPlayed) {
             try {
-                Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.player.currentTime() / $scope.player.duration() * 100})
+                Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.currentTime / $scope.player.duration() * 100})
                 $scope.player.dispose();    
                 // console.log("dispose");
                 $rootScope.hasPlayed = false; 
