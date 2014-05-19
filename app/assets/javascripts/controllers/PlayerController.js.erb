@@ -25,6 +25,7 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
                 $scope.loading = 100;
                 $scope.player.currentTime($scope.progress / 100 * $scope.player.duration());
                 $(".progress-bar-loader").fadeOut(function() {
+                        
                         $(".loading-screen").fadeOut(function() {
                             $scope.player.play();        
                         });
