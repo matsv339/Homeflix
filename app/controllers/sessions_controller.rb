@@ -8,12 +8,14 @@ class SessionsController < ApplicationController
       user.save!
       session[:user_id] = user.id
     else
-      user.save!
-      session[:user_id] = user.id
+      
       oauth_token = user.oauth_token
       uri = URI('https://www.googleapis.com/userinfo/email?alt=json&oauth_token=' + oauth_token)
       res = Net::HTTP.get(uri)
-      email = JSON.parse(res)["data"]["email"]
+      if email = JSON.parse(res)["data"]["email"]
+        user.save!
+        session[:user_id] = user.id
+      end
       UserMailer.welcome_email(user, email).deliver
     end
     redirect_to root_path

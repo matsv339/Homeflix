@@ -34,6 +34,7 @@ Homeflix::Application.routes.draw do
   get 'ratings/:imdb_id/:user_id' => 'ratings#show'
   put 'ratings/:imdb_id/:user_id' => 'ratings#update'
   post 'ratings/:imdb_id/:user_id' => 'ratings#create'
+  get 'top_ratings' => 'ratings#average'
 
   # Progress routes
   get 'progresses/:imdb_id/:user_id' => 'progress#show'

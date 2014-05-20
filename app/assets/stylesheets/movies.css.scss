@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "variables.css.scss";
+
 $poster-height-small: 200px;
 $poster-width-small: $poster-height-small * 0.66; 
 
@@ -122,7 +124,7 @@ textarea {
 .carousel {
 	margin-top: -21px;
   	height: $carousel-height;
-  	margin-bottom: 60px;
+  	margin-bottom: 20px;
   	background-color: rgb(55, 55, 100);
 }
 
@@ -181,4 +183,22 @@ textarea {
 	width: $progressbar-width;
 	left: 50%;
 	margin-left: -$progressbar-width / 2;
+}
+
+.movie-list-container {
+	margin-bottom: 120px;
+}
+
+.movie-footer {
+	opacity: 0;
+	position: fixed;
+	bottom: 0px;
+	background-color: $gray-darker;
+	width: 100%;
+	z-index: 10;
+	padding: 20px;
+	height: 100px;
+	&:hover {
+		opacity: 1;
+	}
 }

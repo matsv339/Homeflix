@@ -1,0 +1,8 @@
+angular.module('movieModule').directive('topMovies', function () {
+	return {
+		restrict: 'AE',
+		scope: true,
+		templateUrl: '<%= asset_path("top-movies.html.erb")%>',
+		controller: 'TopMoviesController'
+	}
+});

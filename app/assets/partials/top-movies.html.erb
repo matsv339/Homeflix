@@ -1,0 +1,14 @@
+<h1 class="text-center">TOP</h1>
+<hr>
+<div class="row">
+	<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in top_movies">
+		<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small shadow">
+			<div class="poster-overlay"></div>
+			<img ng-src="{{movie.data.Poster}}">
+		</a>
+		<p class="text-center">
+			<span class="badge">{{movie.rating}}</span>
+			<rating class="rating-stars" ng-model="movie.rating" readonly="true" max="5" on-leave="overStar = null"></rating>
+		</p>
+	</div>
+</div>

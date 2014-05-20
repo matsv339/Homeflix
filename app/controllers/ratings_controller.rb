@@ -49,4 +49,15 @@ class RatingsController < ApplicationController
 
 		head :ok
 	end
+
+	def average
+		top_results = Rating.select("imdb_id, average_rating").group("imdb_id").order("average_rating desc").limit(10).average(:rating)
+		result = Array.new
+		top_results.each do |key, val|
+			result.push({imdb_id: key, rating: val, data: Movie.find_by(imdb_id: key)})
+		end
+		respond_to do |format|
+			format.json { render :json => result.as_json }
+		end
+	end
 end
