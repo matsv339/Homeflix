@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "variables.css.scss";
-
 $poster-height-small: 200px;
 $poster-width-small: $poster-height-small * 0.66; 
 
@@ -15,6 +13,7 @@ $poster-width-carousel: $poster-height-carousel * 0.66;
 
 $carousel-height: 400px;
 $progressbar-width: 80%;
+
 
 .poster {
 	position: relative;
@@ -124,7 +123,7 @@ textarea {
 .carousel {
 	margin-top: -21px;
   	height: $carousel-height;
-  	margin-bottom: 20px;
+  	margin-bottom: 60px;
   	background-color: rgb(55, 55, 100);
 }
 
@@ -185,20 +184,52 @@ textarea {
 	margin-left: -$progressbar-width / 2;
 }
 
-.movie-list-container {
-	margin-bottom: 120px;
+$news-height-small: 220px;
+$news-hr-margin: 5px;
+$news-container-height: $news-height-small + 2 * $news-hr-margin + 1;
+
+.news-container {
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: $news-container-height;
+	overflow: hidden;
+	margin-bottom: 15px;
+
+	h2 {
+	height: 25px;
+	margin-top: 2px;
+	text-align: left;
+	font-size: 25px;
+	}
+	
+	.newsContent {
+		float: left;
+		margin-bottom: 15px;
+
+		img {
+		height: 150px;
+		width:auto;
+		float: left;
+		margin-right: 15px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		}
+	}
+
+	.newsDate {
+		margin-bottom: 0px;
+	}
+
 }
 
-.movie-footer {
-	opacity: 0;
-	position: fixed;
-	bottom: 0px;
-	background-color: $gray-darker;
+.news-hr {
+	position: relative;
 	width: 100%;
-	z-index: 10;
-	padding: 20px;
-	height: 100px;
-	&:hover {
-		opacity: 1;
-	}
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 25px;
 }
+
+

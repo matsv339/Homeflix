@@ -1,8 +1,12 @@
-<div class="container">
-	<h1>News</h1>
+<div class="container">	
+	<h1> News </h1>
 
-	<span ng-repeat="item in feed.entries">
-	    <h4><a href="{{item.link}}" target="_blank">{{item.title}}</a></h4>
-	    <span>{{item.publishedDate | date:'d-MM-yyyy HH:mm'}}</span>
-	</span>
-</div>
+	<div class="news-container" ng-repeat="item in feed.entries">
+		<hr class="news-hr">   
+		
+            <div class="newsDate">{{item.publishedDate | date:'d-MM-yyyy HH:mm'}}</div>   
+            <h2>{{item.title}}</h2>
+
+            <div ng-bind-html="kbk(item.content)" class="newsContent"></div>
+    </div>
+</div> 
