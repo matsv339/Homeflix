@@ -1,4 +1,4 @@
-<h1 ng_if="hasHistory">Continue to watch</h1>
+<!-- <h1 ng_if="hasHistory">Continue to watch</h1>
 <div class="favorit-container" ng-repeat="movie in reasent_movies">
 	<hr class="favorit-hr">
 	
@@ -12,4 +12,19 @@
 	<h5>{{movie.data.Genre}} - {{movie.data.Runtime}}</h5>
 	<progressbar value="movie.progress"></progressbar>
 	<p>{{movie.data.Plot}}</p>
+</div>
+
+ -->
+<h1 class="text-center">Continue to watch</h1>
+<hr>
+<div class="row">
+	<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in reasent_movies">
+		<a href="#/player/{{movie.data.imdb_id}}" class="poster poster-small shadow">
+			<div class="poster-overlay poster-play"></div>
+			<img ng-src="{{movie.data.Poster}}">
+		</a>
+		<p>
+			<progressbar class="last-watched-progress" value="movie.progress"></progressbar>
+		</p>
+	</div>
 </div>

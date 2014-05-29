@@ -1,8 +1,9 @@
 class MainController < ApplicationController
   	def index
-  		if not session[:user_id]
-  			redirect_to "/login"
-  		end
+  		if not User.find_by(id: session[:user_id])
+        session.clear
+        redirect_to "/login"
+      end
   	end
 
   	def login

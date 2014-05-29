@@ -1,10 +1,10 @@
 <div class="container movie-list-container">
 	
-	<!-- <top-movies></top-movies> -->
+	<top-movies></top-movies>
 	<div ng-repeat="genre in genres | filter: query | orderBy: 'name'">
 		<div ng-if="genre.data.length != 0" class="row">
 			<hr>
-			<h1 class="text-center">{{genre.name | uppercase}}</h1>
+			<h1 class="text-center">{{genre.name}}</h1>
 			<hr>
 			<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in genre.data | orderBy:'Title':false">
 				<a href="#/movies/{{movie.imdb_id}}" tooltip="{{movie.Title}}" tooltip-popup-delay='0' tooltip-animation="false" tooltip-placement="top" class="poster poster-small shadow">

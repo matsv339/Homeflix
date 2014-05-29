@@ -1,14 +1,16 @@
-<h1 class="text-center">TOP</h1>
+<h1 class="text-center">
+	<a class="top-control" ng-click="less_top()">Previous <span class="glyphicon glyphicon-chevron-left"></span></a>
+	Top movies 
+	<a class="top-control" ng-click="more_top()"><span class="glyphicon glyphicon-chevron-right"></span> Next</a>
+</h1>
 <hr>
-<div class="row">
-	<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in top_movies">
+
+<br>
+<div class="row top-row">
+	<div class="col-md-2 col-sm-3 col-xs-6 col-lg-2" ng-repeat="movie in top_movies | slice:lower:upper">
 		<a href="#/movies/{{movie.imdb_id}}" class="poster poster-small shadow">
 			<div class="poster-overlay"></div>
 			<img ng-src="{{movie.data.Poster}}">
 		</a>
-		<p class="text-center">
-			<span class="badge">{{movie.rating}}</span>
-			<rating class="rating-stars" ng-model="movie.rating" readonly="true" max="5" on-leave="overStar = null"></rating>
-		</p>
 	</div>
 </div>

@@ -51,7 +51,10 @@ class RatingsController < ApplicationController
 	end
 
 	def average
-		top_results = Rating.select("imdb_id, average_rating").group("imdb_id").order("average_rating desc").limit(10).average(:rating)
+		if not params[:limit]
+			params[:limit] = 8
+		end
+		top_results = Rating.select("imdb_id, average_rating").group("imdb_id").order("average_rating desc").limit(params[:limit]).average(:rating)
 		result = Array.new
 		top_results.each do |key, val|
 			result.push({imdb_id: key, rating: val, data: Movie.find_by(imdb_id: key)})
