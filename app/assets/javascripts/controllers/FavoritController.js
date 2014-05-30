@@ -37,4 +37,5 @@ angular.module('favoritModule').controller('FavoritController', function($scope,
             });    
         }
     };
+
 });

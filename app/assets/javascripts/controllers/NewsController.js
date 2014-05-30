@@ -10,7 +10,7 @@ angular.module('newsModule').controller('NewsController', function($scope, $http
                     });	
 
 	$scope.kbk = function(element){
-			console.log(element);
+			// console.log(element);
 		return $sce.trustAsHtml(element);
 
 	};
