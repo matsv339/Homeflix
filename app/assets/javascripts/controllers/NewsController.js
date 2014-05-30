@@ -1,8 +1,6 @@
 angular.module('newsModule').controller('NewsController', function($scope, $http, $rootScope, News, $sce) {
 
-	$scope.cool = 1;
-
-	News.fetch({q: 'http://feeds.feedburner.com/thr/film', num: 10}, {}, function (data) {
+	News.fetch({q: 'http://www.hollywoodreporter.com/taxonomy/term/59/0/feed', num: 10}, {}, function (data) {
                         $scope.feed = data.responseData.feed;
                         $scope.entries = data.responseData.feed.entries;
                			
@@ -12,9 +10,13 @@ angular.module('newsModule').controller('NewsController', function($scope, $http
                     });	
 
 	$scope.kbk = function(element){
-		// console.log(element);
-		return $sce.trustAsHtml(element)
+			console.log(element);
+		return $sce.trustAsHtml(element);
+
 	};
+
+
+
 
 });
 
