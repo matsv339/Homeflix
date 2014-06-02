@@ -1,14 +1,25 @@
 class MainController < ApplicationController
-  	def index
-  		if not User.find_by(id: session[:user_id])
-        session.clear
-        redirect_to "/login"
-      end
-  	end
+    
+    def index
+        # If no user with session redirecto to login.
+        puts "Enter index"
+        puts session[:oauth_token]
+        if not User.find_by(oauth_token: session[:oauth_token])
+            session.clear
+            redirect_to "/login"
+        end    
+    end
 
-  	def login
-  		if session[:user_id]
-  			redirect_to "/"
-  		end
-  	end
+    def login
+        # Check if there is a session
+        if session[:oauth_token]
+            # If there is a logedin user, redirect to root.
+            if User.find_by(oauth_token: session[:oauth_token])
+                redirect_to "/"
+            # If not clear invalid session.
+            else
+                session.clear
+            end
+        end
+    end
 end
