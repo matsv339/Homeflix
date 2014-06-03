@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
     respond_to :json
-    require 'net/http' # Enables http requests
+    require 'net/http'
+    require 'net/https' # Enables http requests
+    require 'uri'
 
     # This is where the respons from google end up.
     def create
@@ -14,10 +16,19 @@ class SessionsController < ApplicationController
         else
             # Fetch the users email from google
             oauth_token = user.oauth_token
-            uri = URI('https://www.googleapis.com/userinfo/email?alt=json&oauth_token=' + oauth_token)
-            res = Net::HTTP.get(uri)
+            uri = URI.parse('https://www.googleapis.com/userinfo/email?alt=json&oauth_token=' + oauth_token)
+            http = Net::HTTP.new(uri.host, uri.port)
+            http.use_ssl = true
+                    
+            request = Net::HTTP::Get.new(uri.request_uri)
+            response = http.request(request)
+            puts "Respons"
+            data = response.body
+            res = JSON.parse(data);
+            puts res["data"]["email"]
+
             # If there is a return email from google, save user and create session and send welcome email.
-            if email = JSON.parse(res)["data"]["email"]
+            if email = res["data"]["email"]
                 user.save!
                 session[:oauth_token] = user.oauth_token
                 UserMailer.welcome_email(user, email).deliver

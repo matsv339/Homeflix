@@ -9,7 +9,7 @@ angular.module('newsModule').controller('NewsController', function($scope, $http
 
                     });	
 
-	$scope.kbk = function(element){
+	$scope.repeatNews = function(element){
 			// console.log(element);
 		return $sce.trustAsHtml(element);
 
