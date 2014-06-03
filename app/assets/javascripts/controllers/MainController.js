@@ -3,6 +3,7 @@ angular.module('homeflix').controller('MainController', function($scope, $http, 
 	$http.defaults.headers.post['X-CSRF-Token'] = token;
 	$http.defaults.headers.put['X-CSRF-Token'] = token;
 
+	//Sets the current user after login
 	Sessions.show(function(data) {
 		current_user = data;
 		delete current_user.oauth_token;

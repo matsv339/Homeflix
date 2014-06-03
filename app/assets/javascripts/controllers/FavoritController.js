@@ -1,4 +1,4 @@
-angular.module('favoritModule').controller('FavoritController', function($scope, $rootScope, $http, $routeParams, Favorits) {
+angular.module('movieModule').controller('FavoritController', function($scope, $rootScope, $http, $routeParams, Favorits) {
     //Add imdb_id to scope
     $scope.imdb_id = $routeParams.imdb_id;
     
@@ -23,6 +23,7 @@ angular.module('favoritModule').controller('FavoritController', function($scope,
         }
     });
     
+    //Adds or removes favorit movies from the user from the button
     $scope.updateFavorits = function() { 
         if ($scope.is_favorit) {
             Favorits.destroy({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id}, function(data) {

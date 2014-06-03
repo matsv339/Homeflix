@@ -1,1 +1,1 @@
-angular.module('movieModule', ['favoritModule', 'imdbModule', 'serviceModule']);
+angular.module('movieModule', ['serviceModule']);

@@ -1,9 +1,11 @@
-angular.module('movieModule').controller('MovieListController', function($scope, Movies, IMDB, Genre) {
+angular.module('movieModule').controller('MovieListController', function($scope, Movies, Genre) {
 
+	//Gets all movies by genres
     $scope.genres = Genre.genres();
+
+    //Filter by genre
     $scope.query = {name: ""};
     $scope.filterGenre = function(name) {
-    	console.log("hej");
     	$scope.query.name = name;
     };
 

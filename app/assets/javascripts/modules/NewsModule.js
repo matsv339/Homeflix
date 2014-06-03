@@ -1,1 +1,1 @@
-angular.module('newsModule', []);
+angular.module('newsModule', ['ngSanitize']);

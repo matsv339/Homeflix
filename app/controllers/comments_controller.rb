@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 
 	respond_to :json
 
+	#Gets the comments etc. for a certain movie
 	def index
 		comments = Comment.where(imdb_id: params[:imdb_id]).order(created_at: :desc)
 		ret = Array.new
@@ -17,12 +18,14 @@ class CommentsController < ApplicationController
 		end
 	end
 
+	#Deletes a comment
 	def destroy
 		comment = Comment.find_by(imdb_id: params[:imdb_id], user_id: params[:user_id], id: params[:comment_id])
 		comment.destroy
 		head :ok
 	end
 
+	#Adds a new comment to the database
 	def create
 		Comment.create(user_id: params[:user_id], imdb_id: params[:imdb_id], content: params[:content])
 

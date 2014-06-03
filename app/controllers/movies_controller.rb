@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
 	respond_to :json
 
+	#Gets all movies
 	def index
 		movies = Movie.all
 
@@ -9,6 +10,7 @@ class MoviesController < ApplicationController
 		end
 	end
 
+	#Gets the latest movies
 	def last
 		movies = Movie.limit(5).order("created_at desc")
 		
@@ -17,15 +19,16 @@ class MoviesController < ApplicationController
 		end
 	end
 
+	#Gets the movies the matches the search parameters
 	def search 
-
 		movies = Movie.search(params[:key])
-		
+	
 		respond_with(movies) do |format|
 			format.json { render :json => movies.as_json }
 		end
 	end
 
+	#Gets the movies woth the correct genre
 	def genres
 		data = Array.new
 		genres = Genre.all

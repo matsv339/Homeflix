@@ -5,6 +5,7 @@ angular.module('movieModule').controller('TopMoviesController', function($scope,
 	$scope.upper = 6;
 	step = 6;
 
+	//Gets the top movies 
 	TopMovies.top_ratings({limit: limit}, function(data) {
 		
 		$scope.top_movies = data;
@@ -19,6 +20,7 @@ angular.module('movieModule').controller('TopMoviesController', function($scope,
 		$scope.isLess = false;
 	});	
 
+	//Get the next 6 topmovies
 	$scope.more_top = function() {
 		if ($scope.upper < $scope.max) {
 			$scope.lower = $scope.lower  + step;
@@ -30,6 +32,7 @@ angular.module('movieModule').controller('TopMoviesController', function($scope,
 		}
 	};
 
+	//Get the previous top 6 movies
 	$scope.less_top = function() {
 		if ($scope.lower > 0) {
 			$scope.lower = $scope.lower  - step;

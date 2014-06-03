@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	respond_to :json
 
+	#Is not used, only for development
 	def index
 		users = User.all
 

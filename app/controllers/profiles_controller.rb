@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
 
 	respond_to :json
 
+	#Gets the 6 last watched movies from a specified user
 	def last_watched
 		last_movies = Progress.where(user_id: params[:user_id]).limit(6).order("updated_at desc")
 		movies = Array.new

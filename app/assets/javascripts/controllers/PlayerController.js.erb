@@ -1,18 +1,21 @@
-angular.module('playerModule').controller('PlayerController', function($scope, $rootScope, $routeParams, $location, Progresses) {
+angular.module('movieModule').controller('PlayerController', function($scope, $rootScope, $routeParams, $location, Progresses) {
+    
     //Find the movie on server
     $scope.imdb_id = $routeParams.imdb_id;
     $scope.moviePath = "assets/" + $scope.imdb_id + ".mp4";
+    
+    //Override because we only have one movie at the moment
+    $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
     $scope.loading = 0;
     
     Progresses.show({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id}, function(data) {
         $scope.loading = 33;
         $scope.progress = data.progress;
         
-        $scope.moviePath = '<%= asset_path("test_mid.mp4")%>'
+        
         //Initialises the player
         videojs("player").ready(function() {
             $scope.loading = 66;
-            // console.log("ready");
             $scope.player = this;
             $scope.player.height("100%");
             $scope.player.width("100%");
@@ -39,14 +42,12 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
                 $scope.timer ++;
                 //Save progress
                 if ($scope.timer % 200 == 0) {
-                    // console.log("update");
                     Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.player.currentTime() / $scope.player.duration() * 100})
                 };
             });
 
             //On ended event
             $scope.player.on("ended", function() {
-                // console.log("ended");
                 $location.path("/movies/" + $scope.imdb_id);
                 $scope.$apply();
                 Progresses.destroy({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id});
@@ -65,7 +66,6 @@ angular.module('playerModule').controller('PlayerController', function($scope, $
             try {
                 Progresses.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, progress: $scope.currentTime / $scope.player.duration() * 100})
                 $scope.player.dispose();    
-                // console.log("dispose");
                 $rootScope.hasPlayed = false; 
             }
             //Hides a wierd error in the player cleanup.

@@ -1,8 +1,11 @@
 angular.module('movieModule').controller('MovieDetailedController', function($scope, $rootScope, $routeParams, Movies, Progresses) {
+    
+    //Checks if the movie id is valid and sets the imdb rating
     $scope.valid_id = false;
     $scope.imdb_id = $routeParams.imdb_id;
     $scope.rate = 3;
   	$scope.max = 5;
+    //Gets the data for the imdb id
     Movies.search({key: $scope.imdb_id}, function(data) {
 		if (data[0]) {
 			$scope.movie = data[0];	

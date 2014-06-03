@@ -2,8 +2,6 @@ class MainController < ApplicationController
     
     def index
         # If no user with session redirecto to login.
-        puts "Enter index"
-        puts session[:oauth_token]
         if not User.find_by(oauth_token: session[:oauth_token])
             session.clear
             redirect_to "/login"

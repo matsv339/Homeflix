@@ -13,6 +13,7 @@ angular.module('movieModule').controller('CommentController', function($scope, C
 			$scope.comments = Comments.index({imdb_id: $scope.imdb_id});
 		});
 	}
+	
 	//Valuates the keyup event and creates a comment on 13(enter).
 	$scope.submit = function($event) {
 		if ($event.keyCode == 13) {

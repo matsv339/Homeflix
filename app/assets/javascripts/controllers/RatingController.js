@@ -2,11 +2,13 @@ angular.module('movieModule').controller('RatingsController', function($scope, $
     $scope.imdb_id = $routeParams.imdb_id;
   	$scope.max = 5;
   	
+    //Gets the ratings for a movie
   	Ratings.index({imdb_id: $scope.imdb_id}, function(data) {
   		$scope.average = data.average;
   		$scope.votes = data.votes;
   	});
 
+    //Show the rating that the user has given a movie
     Ratings.show({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id}, function(data) {
 		if (data.respons == "null") {
 			$scope.rate = 0;
@@ -20,6 +22,8 @@ angular.module('movieModule').controller('RatingsController', function($scope, $
 			$scope.old_rating = $scope.rate;
 		}
     });
+
+    //If the user rates the movie
     $scope.rateMovie = function() {
     	if ($scope.rated) {
     		Ratings.update({user_id: $rootScope.current_user.id, imdb_id: $scope.imdb_id, rating: $scope.rate}, function(data) {
